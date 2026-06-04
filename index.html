@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Alice's Game">
+<meta name="theme-color" content="#0a1628">
+<title>Alice's Word Game</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html, body { height: 100%; background: #0a1628; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  body { padding: env(safe-area-inset-top, 12px) env(safe-area-inset-right, 12px) env(safe-area-inset-bottom, 12px) env(safe-area-inset-left, 12px); overflow-x: hidden; }
+
+  .screen { display: none; max-width: 700px; margin: 0 auto; padding: 0.75rem 0.5rem; }
+  #setup-screen { display: block; }
+
+  .game-title { color: #fff; font-size: clamp(15px,4vw,22px); font-weight: 500; margin-bottom: 0.4rem; text-align: center; }
+  .game-subtitle { color: #4a7bd4; font-size: clamp(11px,3vw,13px); text-align: center; margin-bottom: 3px; font-weight: 500; letter-spacing: 0.04em; }
+  .game-desc { color: #8ca4cc; font-size: clamp(12px,3vw,14px); text-align: center; margin-bottom: 1.2rem; }
+
+  .col-labels { display: grid; grid-template-columns: 1fr 1fr; margin-bottom: 5px; gap: 8px; }
+  .col-labels span { font-size: 11px; color: #4a6690; text-align: center; letter-spacing: 0.05em; }
+  .word-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 7px; }
+  .word-row input { padding: 9px 10px; border-radius: 8px; border: 0.5px solid #2a3f66; background: #0f2040; color: #fff; font-size: clamp(13px,3.5vw,15px); width: 100%; outline: none; }
+  .word-row input:focus { border-color: #4a7bd4; }
+  .word-row input::placeholder { color: #3d5278; }
+  #error-msg { color: #f09595; font-size: 13px; text-align: center; margin-top: 6px; min-height: 18px; }
+
+  .btn-row { display: flex; gap: 8px; justify-content: center; margin-top: 1rem; flex-wrap: wrap; }
+  .btn-clear { padding: 10px 18px; background: transparent; border: 0.5px solid #2a3f66; color: #8ca4cc; border-radius: 10px; font-size: clamp(13px,3.5vw,15px); cursor: pointer; }
+  .btn-start-mem { padding: 10px 18px; background: #2a5ab8; color: #fff; border: none; border-radius: 10px; font-size: clamp(13px,3.5vw,15px); font-weight: 500; cursor: pointer; }
+  .btn-start-en  { padding: 10px 18px; background: #1d7a3a; color: #fff; border: none; border-radius: 10px; font-size: clamp(13px,3.5vw,15px); font-weight: 500; cursor: pointer; }
+  .btn-start-sv  { padding: 10px 18px; background: #b8860b; color: #fff; border: none; border-radius: 10px; font-size: clamp(13px,3.5vw,15px); font-weight: 500; cursor: pointer; }
+
+  /* HUD */
+  #game-screen { max-width: 900px; }
+  #hud { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8rem; flex-wrap: wrap; gap: 6px; }
+  .hud-box { background: #0f2040; border: 0.5px solid #2a3f66; border-radius: 8px; padding: 5px 12px; color: #fff; font-size: clamp(12px,3vw,14px); }
+  .hud-box span { color: #8ca4cc; font-size: 11px; display: block; }
+  .btn-hud { padding: 7px 14px; background: transparent; border: 0.5px solid #2a3f66; color: #8ca4cc; border-radius: 8px; font-size: clamp(12px,3vw,13px); cursor: pointer; white-space: nowrap; }
+  .btn-hud:active { border-color: #4a7bd4; color: #fff; }
+
+  /* Board — adapts columns based on pair count and screen width */
+  #board { display: grid; gap: 8px; }
+  .card { border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: clamp(11px,2.8vw,14px); font-weight: 500; text-align: center; padding: 6px; line-height: 1.3; transition: transform 0.12s, opacity 0.2s; user-select: none; border: 2px solid transparent; aspect-ratio: 1 / 0.9; }
+  .card.english { background: #fff; color: #111; border-color: #ddd; }
+  .card.swedish { background: #111; color: #fff; border-color: #333; }
+  .card.selected { border-color: #ffd700 !important; border-width: 4px !important; transform: scale(1.05); }
+  .card.matched { opacity: 0.35; cursor: default; border-color: #1d9e75 !important; transform: scale(1); }
+  .card.flipped-wrong { border-color: #e24b4a !important; }
+
+  /* Practice */
+  .practice-header { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
+  .practice-header h2 { color: #fff; font-size: clamp(14px,4vw,18px); font-weight: 500; flex: 1; }
+  .practice-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: center; margin-bottom: 9px; }
+  .practice-card { border-radius: 10px; padding: 11px 12px; font-size: clamp(13px,3.5vw,15px); font-weight: 500; text-align: center; }
+  .practice-card.english { background: #fff; color: #111; }
+  .practice-card.swedish { background: #111; color: #fff; border: 1px solid #333; }
+  .practice-input { padding: 10px 11px; border-radius: 10px; border: 2px solid #2a3f66; background: #0f2040; color: #fff; font-size: clamp(13px,3.5vw,15px); width: 100%; outline: none; transition: border-color 0.15s; }
+  .practice-input.correct { border-color: #1d9e75 !important; background: #0a2a1e; }
+  .practice-input.wrong   { border-color: #e24b4a !important; background: #2a0f0f; }
+  .practice-check-btn { display: block; margin: 1.2rem auto 0; padding: 11px 32px; background: #2a5ab8; color: #fff; border: none; border-radius: 10px; font-size: clamp(13px,3.5vw,15px); font-weight: 500; cursor: pointer; }
+  .practice-result { text-align: center; margin-top: 0.9rem; font-size: 14px; color: #8ca4cc; min-height: 20px; }
+  .practice-result .cc { color: #1d9e75; font-weight: 500; }
+  .practice-result .wc { color: #e24b4a; font-weight: 500; }
+
+  /* Win */
+  #win-screen { text-align: center; padding: 2rem 0; }
+  #win-screen h2 { color: #fff; font-size: clamp(20px,5vw,26px); font-weight: 500; margin-bottom: 0.5rem; }
+  #win-screen p  { color: #8ca4cc; font-size: 15px; margin-bottom: 1.5rem; }
+  .btn-play-again { padding: 12px 34px; background: #2a5ab8; color: #fff; border: none; border-radius: 10px; font-size: 16px; cursor: pointer; }
+
+  /* Cheer */
+  #cheer-banner { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); background: #0f2040; border: 2px solid #4a7bd4; border-radius: 16px; padding: 1.4rem 2.2rem; text-align: center; z-index: 100; width: min(85vw, 320px); }
+  #cheer-banner p     { color: #fff; font-size: clamp(16px,4vw,20px); font-weight: 500; }
+  #cheer-banner small { color: #8ca4cc; font-size: 13px; display: block; margin-top: 4px; }
+
+  .top-title { color: #fff; font-size: clamp(13px,3.5vw,18px); font-weight: 500; text-align: center; padding: 0.6rem 0 0.4rem; }
+</style>
+</head>
+<body>
+
+<p class="top-title">English–Swedish memory card matching game for children</p>
+
+<!-- SETUP -->
+<div id="setup-screen" class="screen">
+  <p class="game-subtitle">THIS GAME IS FOR YOU</p>
+  <h1 class="game-title">Alice</h1>
+  <p class="game-desc">Enter word pairs — English left, Swedish right.</p>
+  <div class="col-labels"><span>ENGLISH</span><span>SWEDISH</span></div>
+  <div id="word-inputs"></div>
+  <div id="error-msg"></div>
+  <div class="btn-row">
+    <button class="btn-clear" id="clear-btn">Clear all</button>
+    <button class="btn-start-mem" id="start-btn">Start memory game</button>
+  </div>
+  <div class="btn-row">
+    <button class="btn-start-en" id="practice-en-btn">Start game English</button>
+    <button class="btn-start-sv" id="practice-sv-btn">Start game Swedish</button>
+  </div>
+</div>
+
+<!-- MEMORY GAME -->
+<div id="game-screen" class="screen">
+  <div id="hud">
+    <div class="hud-box"><span>Score</span><strong id="score-val">0</strong></div>
+    <div class="hud-box"><span>Time</span><strong id="timer-val">0:00</strong></div>
+    <div class="hud-box"><span>Pairs</span><strong id="pairs-val">0/0</strong></div>
+    <button class="btn-hud" id="restart-btn">↺ Restart</button>
+    <button class="btn-hud" id="back-btn">← Back</button>
+  </div>
+  <div id="board"></div>
+</div>
+
+<!-- PRACTICE ENGLISH -->
+<div id="practice-en-screen" class="screen">
+  <div class="practice-header">
+    <button class="btn-hud" id="back-pen-btn">← Back</button>
+    <h2>Write the Swedish translation</h2>
+  </div>
+  <div id="pen-rows"></div>
+  <button class="practice-check-btn" id="pen-check-btn">Check answers</button>
+  <div class="practice-result" id="pen-result"></div>
+</div>
+
+<!-- PRACTICE SWEDISH -->
+<div id="practice-sv-screen" class="screen">
+  <div class="practice-header">
+    <button class="btn-hud" id="back-psv-btn">← Back</button>
+    <h2>Write the English translation</h2>
+  </div>
+  <div id="psv-rows"></div>
+  <button class="practice-check-btn" id="psv-check-btn">Check answers</button>
+  <div class="practice-result" id="psv-result"></div>
+</div>
+
+<!-- WIN -->
+<div id="win-screen" class="screen">
+  <h2>You won! 🎉</h2>
+  <p id="win-msg"></p>
+  <button class="btn-play-again" id="play-again-btn">Play Again</button>
+</div>
+
+<div id="cheer-banner" role="status" aria-live="polite">
+  <p id="cheer-text"></p>
+  <small id="cheer-sub"></small>
+</div>
+
+<script>
+const cheers=[["Fantastic!","Great match!"],["Superb!","Keep going!"],["Brilliant!","You're on fire!"],
+  ["Amazing!","Perfect pair!"],["Well done!","One more step closer!"],["Excellent!","You rock!"],
+  ["Outstanding!","Incredible memory!"],["Wow!","That was fast!"],["Great job!","Nothing can stop you!"],["Perfecto!","You nailed it!"]];
+
+let words=[],score=0,pairs=0,timerSec=0,timerInterval=null,selected=[],locked=false;
+
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.style.display='none');document.getElementById(id).style.display='block';}
+
+function buildInputs(){
+  const c=document.getElementById('word-inputs');
+  for(let i=0;i<10;i++){
+    const row=document.createElement('div');row.className='word-row';
+    row.innerHTML=`<input type="text" placeholder="e.g. apple" data-idx="${i}" data-lang="en" autocomplete="off" autocorrect="off" autocapitalize="none">
+                   <input type="text" placeholder="e.g. äpple" data-idx="${i}" data-lang="sv" autocomplete="off" autocorrect="off" autocapitalize="none">`;
+    c.appendChild(row);
+  }
+}
+
+function getWords(){
+  const en=document.querySelectorAll('[data-lang="en"]'),sv=document.querySelectorAll('[data-lang="sv"]');
+  const w=[];let hasSingle=false;
+  for(let i=0;i<10;i++){const e=en[i].value.trim(),s=sv[i].value.trim();if(e&&s)w.push({en:e,sv:s,id:i});else if(e||s)hasSingle=true;}
+  return{w,hasSingle};
+}
+
+function validate(){
+  const{w,hasSingle}=getWords();
+  if(hasSingle){document.getElementById('error-msg').textContent='Every English word needs a Swedish translation. Please complete or clear incomplete pairs.';return null;}
+  if(w.length<2){document.getElementById('error-msg').textContent='Please enter at least 2 word pairs to start.';return null;}
+  document.getElementById('error-msg').textContent='';return w;
+}
+
+function setBoardColumns(n){
+  // Pick columns to look good on phone and tablet
+  const cols=n<=3?n:n<=6?3:n<=8?4:5;
+  document.getElementById('board').style.gridTemplateColumns=`repeat(${cols},1fr)`;
+}
+
+document.getElementById('clear-btn').addEventListener('click',()=>{
+  document.querySelectorAll('#word-inputs input').forEach(i=>i.value='');
+  document.getElementById('error-msg').textContent='';
+});
+document.getElementById('start-btn').addEventListener('click',()=>{const w=validate();if(!w)return;words=w;startGame();});
+document.getElementById('back-btn').addEventListener('click',()=>{clearInterval(timerInterval);show('setup-screen');});
+document.getElementById('restart-btn').addEventListener('click',startGame);
+document.getElementById('play-again-btn').addEventListener('click',()=>show('setup-screen'));
+
+function startGame(){
+  score=0;pairs=0;timerSec=0;selected=[];locked=false;
+  updateHUD();clearInterval(timerInterval);
+  timerInterval=setInterval(()=>{timerSec++;updateHUD();},1000);
+  show('game-screen');buildBoard();
+}
+
+function updateHUD(){
+  document.getElementById('score-val').textContent=score;
+  const m=Math.floor(timerSec/60),s=timerSec%60;
+  document.getElementById('timer-val').textContent=`${m}:${s.toString().padStart(2,'0')}`;
+  document.getElementById('pairs-val').textContent=`${pairs}/${words.length}`;
+}
+
+function buildBoard(){
+  const board=document.getElementById('board');board.innerHTML='';
+  const cards=[];
+  words.forEach(w=>{cards.push({text:w.en,type:'english',id:w.id});cards.push({text:w.sv,type:'swedish',id:w.id});});
+  cards.sort(()=>Math.random()-0.5);
+  setBoardColumns(words.length);
+  cards.forEach(c=>{
+    const div=document.createElement('div');div.className=`card ${c.type}`;
+    div.textContent=c.text;div.dataset.id=c.id;div.dataset.type=c.type;
+    div.addEventListener('click',()=>onCardClick(div,c));board.appendChild(div);
+  });
+}
+
+function pronounce(word){const u=new SpeechSynthesisUtterance(word);u.lang='en-US';speechSynthesis.cancel();speechSynthesis.speak(u);}
+
+function onCardClick(el,card){
+  if(locked||el.classList.contains('matched')||el.classList.contains('selected'))return;
+  if(selected.length===0&&card.type!=='english')return;
+  if(selected.length===1&&card.type!=='swedish')return;
+  if(card.type==='english')pronounce(card.text);
+  el.classList.add('selected');selected.push({el,card});
+  if(selected.length===2){
+    locked=true;const[a,b]=selected;
+    if(a.card.id===b.card.id&&a.card.type!==b.card.type){
+      score+=2;pairs++;
+      setTimeout(()=>{
+        a.el.classList.remove('selected');b.el.classList.remove('selected');
+        a.el.classList.add('matched');b.el.classList.add('matched');
+        updateHUD();selected=[];locked=false;showCheer(pairs-1);
+        if(pairs===words.length)setTimeout(showWin,1200);
+      },400);
+    }else{
+      score=Math.max(0,score-1);
+      a.el.classList.add('flipped-wrong');b.el.classList.add('flipped-wrong');
+      updateHUD();
+      setTimeout(()=>{a.el.classList.remove('selected','flipped-wrong');b.el.classList.remove('selected','flipped-wrong');selected=[];locked=false;},900);
+    }
+  }
+}
+
+function showCheer(idx){
+  const[main,sub]=cheers[idx%cheers.length];
+  const banner=document.getElementById('cheer-banner');
+  document.getElementById('cheer-text').textContent=main;
+  document.getElementById('cheer-sub').textContent=sub;
+  banner.style.display='block';clearTimeout(banner._t);banner._t=setTimeout(()=>banner.style.display='none',1400);
+}
+
+function showWin(){
+  clearInterval(timerInterval);
+  const m=Math.floor(timerSec/60),s=timerSec%60;
+  document.getElementById('win-msg').textContent=`Score: ${score} points · Time: ${m}:${s.toString().padStart(2,'0')}`;
+  show('win-screen');
+}
+
+// Practice English
+document.getElementById('practice-en-btn').addEventListener('click',()=>{
+  const w=validate();if(!w)return;words=w;
+  const cont=document.getElementById('pen-rows');cont.innerHTML='';
+  words.forEach(word=>{
+    const row=document.createElement('div');row.className='practice-row';
+    row.innerHTML=`<div class="practice-card english">${word.en}</div>
+                   <input class="practice-input" type="text" placeholder="Swedish…" data-answer="${word.sv.toLowerCase()}" autocomplete="off" autocorrect="off" autocapitalize="none">`;
+    cont.appendChild(row);
+  });
+  document.getElementById('pen-result').innerHTML='';
+  show('practice-en-screen');
+});
+document.getElementById('pen-check-btn').addEventListener('click',()=>{
+  let c=0,w=0;
+  document.querySelectorAll('#pen-rows .practice-input').forEach(inp=>{
+    const v=inp.value.trim().toLowerCase(),a=inp.dataset.answer;
+    inp.classList.remove('correct','wrong');
+    if(v===a){inp.classList.add('correct');c++;}else{inp.classList.add('wrong');w++;}
+  });
+  document.getElementById('pen-result').innerHTML=`<span class="cc">${c} correct</span> · <span class="wc">${w} wrong</span>`;
+});
+document.getElementById('back-pen-btn').addEventListener('click',()=>show('setup-screen'));
+
+// Practice Swedish
+document.getElementById('practice-sv-btn').addEventListener('click',()=>{
+  const w=validate();if(!w)return;words=w;
+  const cont=document.getElementById('psv-rows');cont.innerHTML='';
+  words.forEach(word=>{
+    const row=document.createElement('div');row.className='practice-row';
+    row.innerHTML=`<div class="practice-card swedish">${word.sv}</div>
+                   <input class="practice-input" type="text" placeholder="English…" data-answer="${word.en.toLowerCase()}" autocomplete="off" autocorrect="off" autocapitalize="none">`;
+    cont.appendChild(row);
+  });
+  document.getElementById('psv-result').innerHTML='';
+  show('practice-sv-screen');
+});
+document.getElementById('psv-check-btn').addEventListener('click',()=>{
+  let c=0,w=0;
+  document.querySelectorAll('#psv-rows .practice-input').forEach(inp=>{
+    const v=inp.value.trim().toLowerCase(),a=inp.dataset.answer;
+    inp.classList.remove('correct','wrong');
+    if(v===a){inp.classList.add('correct');c++;}else{inp.classList.add('wrong');w++;}
+  });
+  document.getElementById('psv-result').innerHTML=`<span class="cc">${c} correct</span> · <span class="wc">${w} wrong</span>`;
+});
+document.getElementById('back-psv-btn').addEventListener('click',()=>show('setup-screen'));
+
+buildInputs();
+</script>
+</body>
+</html>
