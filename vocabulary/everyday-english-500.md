@@ -33,10 +33,30 @@ What was deliberately left out: rare animals, colours, numbers and other
 already-known starter vocabulary; school-subject jargon; and anything needing grammar
 she has not met yet.
 
-## How to use it with the game
+## How the game uses it
 
-The game takes ten pairs at a round, so each section below is two to four rounds'
-worth of words. A sensible order:
+The list is built into the app, so nothing here has to be typed in by hand.
+
+- **Today's 10** builds the round: everything due for review (most overdue first, so easy and
+  hard words mix), topped up with new words in the teaching order below. Every word carries a box
+  from 1 to 5. A word answered right all through a round moves up a box and comes back later; a
+  word missed anywhere in the round drops to box 1 and returns the same day. Box 5 counts as
+  learned.
+- **Choose a topic** runs any section below as sets of ten, in any order.
+- One round is one session: meet the new words (example sentence read aloud) -> memory game ->
+  typing, asked English-to-Swedish until a word reaches box 3 and Swedish-to-English after that
+  -> a sentence task -> summary.
+- **Sentence tasks** use the example sentences: fill the gap from four words of the same section,
+  or put a scrambled sentence back in order. They cover the 83 words that carry an example, which
+  are exactly the sentence-building sections (1, 2, 4, 7).
+- **My own words** still takes ten typed pairs for homework and spellings, kept out of the
+  progress record.
+
+Progress is saved in the browser on that one device, so keep her on the same browser.
+
+## Teaching order
+
+The app follows the order below, and it is the order to pick topics in by hand:
 
 1. **Start with sections 1–7** (glue, questions, pronouns, prepositions, time,
    quantity, helper verbs) — about 150 words and the fastest route to longer
@@ -48,12 +68,21 @@ worth of words. A sensible order:
 4. **Sections 15–22** are the nouns and phrases — useful, but the least urgent, and
    the easiest to pick up from context.
 
-Two practical notes for the memory game. Keep each round inside one section: every
-Swedish word in this list is used only once, but two cards with similar meanings are
-still easier to mix up when they come from different topics. And where two English
-words would otherwise land on the same Swedish word, the Swedish side carries a
-clarifier in brackets (*tall — lång (om person)*, *light — lätt (vikt)*) — type the
-bracket too, or the pair stops being one-to-one.
+## Editing the list
+
+`vocabulary/everyday-english-500.json` is the source of truth. Edit it, then run:
+
+```
+python3 tools/build_vocab.py
+```
+
+That rewrites this file and the copy of the words embedded in `index.html`. It refuses to build
+if an English or a Swedish word is used twice, because the memory game needs every pair to be
+one-to-one. Where two English words would otherwise land on the same Swedish word, the Swedish
+side carries a clarifier in brackets (*tall — lång (om person)*, *light — lätt (vikt)*). The app
+ignores anything in brackets when it marks a typed answer, along with case, trailing punctuation,
+a leading *att*, and any comma-separated alternative; a word needing something else accepted takes
+an `accept` list in the JSON.
 
 ## The list
 

@@ -14,11 +14,23 @@
   body { padding: env(safe-area-inset-top, 12px) env(safe-area-inset-right, 12px) env(safe-area-inset-bottom, 12px) env(safe-area-inset-left, 12px); overflow-x: hidden; }
 
   .screen { display: none; max-width: 700px; margin: 0 auto; padding: 0.75rem 0.5rem; }
-  #setup-screen { display: block; }
+  #home-screen { display: block; }
 
   .game-title { color: #fff; font-size: clamp(15px,4vw,22px); font-weight: 500; margin-bottom: 0.4rem; text-align: center; }
   .game-subtitle { color: #4a7bd4; font-size: clamp(11px,3vw,13px); text-align: center; margin-bottom: 3px; font-weight: 500; letter-spacing: 0.04em; }
   .game-desc { color: #8ca4cc; font-size: clamp(12px,3vw,14px); text-align: center; margin-bottom: 1.2rem; }
+
+  /* Home / lists */
+  .big-btn { display: block; width: 100%; max-width: 420px; margin: 0 auto 10px; padding: 13px 16px; border-radius: 12px; border: 0.5px solid #2a3f66; background: #0f2040; color: #fff; font-size: clamp(14px,3.8vw,16px); font-weight: 500; text-align: left; cursor: pointer; }
+  .big-btn small { display: block; color: #8ca4cc; font-size: 12px; font-weight: 400; margin-top: 3px; }
+  .big-btn.primary { background: #2a5ab8; border-color: #2a5ab8; }
+  .big-btn.primary small { color: #cfe0ff; }
+  .big-btn:active { border-color: #4a7bd4; }
+  .row-btn { display: block; width: 100%; margin-bottom: 7px; padding: 10px 13px; border-radius: 10px; border: 0.5px solid #2a3f66; background: #0f2040; color: #fff; font-size: clamp(13px,3.4vw,15px); text-align: left; cursor: pointer; }
+  .row-btn .row-top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+  .row-btn .row-count { color: #8ca4cc; font-size: 12px; white-space: nowrap; }
+  .bar { height: 5px; background: #16294a; border-radius: 3px; overflow: hidden; margin-top: 7px; }
+  .bar i { display: block; height: 100%; background: #1d9e75; border-radius: 3px; }
 
   .col-labels { display: grid; grid-template-columns: 1fr 1fr; margin-bottom: 5px; gap: 8px; }
   .col-labels span { font-size: 11px; color: #4a6690; text-align: center; letter-spacing: 0.05em; }
@@ -51,7 +63,7 @@
   .card.matched { opacity: 0.35; cursor: default; border-color: #1d9e75 !important; transform: scale(1); }
   .card.flipped-wrong { border-color: #e24b4a !important; }
 
-  /* Practice */
+  /* Practice / typing */
   .practice-header { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
   .practice-header h2 { color: #fff; font-size: clamp(14px,4vw,18px); font-weight: 500; flex: 1; }
   .practice-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: center; margin-bottom: 9px; }
@@ -61,16 +73,47 @@
   .practice-input { padding: 10px 11px; border-radius: 10px; border: 2px solid #2a3f66; background: #0f2040; color: #fff; font-size: clamp(13px,3.5vw,15px); width: 100%; outline: none; transition: border-color 0.15s; }
   .practice-input.correct { border-color: #1d9e75 !important; background: #0a2a1e; }
   .practice-input.wrong   { border-color: #e24b4a !important; background: #2a0f0f; }
+  .answer-hint { grid-column: 2; color: #1d9e75; font-size: 12px; margin-top: -4px; }
   .practice-check-btn { display: block; margin: 1.2rem auto 0; padding: 11px 32px; background: #2a5ab8; color: #fff; border: none; border-radius: 10px; font-size: clamp(13px,3.5vw,15px); font-weight: 500; cursor: pointer; }
   .practice-result { text-align: center; margin-top: 0.9rem; font-size: 14px; color: #8ca4cc; min-height: 20px; }
   .practice-result .cc { color: #1d9e75; font-weight: 500; }
   .practice-result .wc { color: #e24b4a; font-weight: 500; }
 
-  /* Win */
-  #win-screen { text-align: center; padding: 2rem 0; }
-  #win-screen h2 { color: #fff; font-size: clamp(20px,5vw,26px); font-weight: 500; margin-bottom: 0.5rem; }
-  #win-screen p  { color: #8ca4cc; font-size: 15px; margin-bottom: 1.5rem; }
+  /* Meet a new word */
+  .meet-card { background: #0f2040; border: 0.5px solid #2a3f66; border-radius: 16px; padding: 1.6rem 1.2rem; text-align: center; max-width: 460px; margin: 0 auto; }
+  .meet-en { color: #fff; font-size: clamp(26px,7vw,34px); font-weight: 600; }
+  .meet-sv { color: #ffd700; font-size: clamp(17px,4.5vw,21px); margin-top: 6px; }
+  .meet-ex { color: #8ca4cc; font-size: clamp(13px,3.5vw,15px); margin-top: 1rem; line-height: 1.5; font-style: italic; min-height: 20px; }
+  .btn-say { margin-top: 12px; padding: 7px 16px; background: transparent; border: 0.5px solid #2a3f66; color: #8ca4cc; border-radius: 20px; font-size: 13px; cursor: pointer; }
+
+  /* Sentence tasks */
+  .task-label { color: #4a7bd4; font-size: 12px; letter-spacing: 0.05em; text-align: center; margin-bottom: 0.7rem; }
+  .sentence-box { background: #0f2040; border: 0.5px solid #2a3f66; border-radius: 12px; padding: 1.1rem 1rem; color: #fff; font-size: clamp(15px,4.2vw,19px); text-align: center; line-height: 1.6; min-height: 60px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px; }
+  .sentence-box .gap { color: #ffd700; letter-spacing: 2px; }
+  .chip-area { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 1rem; min-height: 44px; }
+  .chip { padding: 9px 14px; border-radius: 10px; border: 0.5px solid #2a3f66; background: #0f2040; color: #fff; font-size: clamp(13px,3.6vw,15px); cursor: pointer; }
+  .chip:active { border-color: #4a7bd4; }
+  .chip.placed { background: #1d3763; border-color: #4a7bd4; }
+  .chip.correct { background: #0a2a1e; border-color: #1d9e75; color: #9ff0cf; }
+  .chip.wrong { background: #2a0f0f; border-color: #e24b4a; color: #f5b5b5; }
+  .slot-area { min-height: 46px; border-bottom: 1px dashed #2a3f66; padding-bottom: 8px; }
+
+  /* Win / summary */
+  #win-screen, #summary-screen { text-align: center; padding: 1.5rem 0; }
+  #win-screen h2, #summary-screen h2 { color: #fff; font-size: clamp(20px,5vw,26px); font-weight: 500; margin-bottom: 0.5rem; }
+  #win-screen p, #summary-screen p { color: #8ca4cc; font-size: 15px; margin-bottom: 1.2rem; }
   .btn-play-again { padding: 12px 34px; background: #2a5ab8; color: #fff; border: none; border-radius: 10px; font-size: 16px; cursor: pointer; }
+  .sum-list { max-width: 420px; margin: 0 auto 1.4rem; text-align: left; }
+  .sum-item { display: flex; justify-content: space-between; gap: 10px; padding: 8px 12px; border-radius: 9px; background: #0f2040; border: 0.5px solid #2a3f66; margin-bottom: 6px; color: #fff; font-size: 14px; }
+  .sum-item span { color: #8ca4cc; }
+  .sum-item.up { border-color: #1d9e75; }
+  .sum-item.down { border-color: #e24b4a; }
+  .sum-head { color: #4a7bd4; font-size: 12px; letter-spacing: 0.05em; margin: 0 0 6px 2px; }
+
+  .stat-row { display: flex; gap: 8px; justify-content: center; margin-bottom: 1.4rem; flex-wrap: wrap; }
+  .stat { background: #0f2040; border: 0.5px solid #2a3f66; border-radius: 12px; padding: 12px 20px; min-width: 96px; }
+  .stat strong { display: block; color: #fff; font-size: 22px; font-weight: 600; }
+  .stat span { color: #8ca4cc; font-size: 11px; letter-spacing: 0.04em; }
 
   /* Cheer */
   #cheer-banner { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); background: #0f2040; border: 2px solid #4a7bd4; border-radius: 16px; padding: 1.4rem 2.2rem; text-align: center; z-index: 100; width: min(85vw, 320px); }
@@ -78,16 +121,49 @@
   #cheer-banner small { color: #8ca4cc; font-size: 13px; display: block; margin-top: 4px; }
 
   .top-title { color: #fff; font-size: clamp(13px,3.5vw,18px); font-weight: 500; text-align: center; padding: 0.6rem 0 0.4rem; }
+  .step-dots { text-align: center; color: #4a6690; font-size: 12px; letter-spacing: 0.08em; margin-bottom: 0.6rem; }
 </style>
 </head>
 <body>
 
-<p class="top-title">English–Swedish memory card matching game for children</p>
+<p class="top-title">English–Swedish word game for children</p>
 
-<!-- SETUP -->
-<div id="setup-screen" class="screen">
+<!-- HOME -->
+<div id="home-screen" class="screen">
   <p class="game-subtitle">THIS GAME IS FOR YOU</p>
   <h1 class="game-title">Alice</h1>
+  <p class="game-desc" id="home-stats">&nbsp;</p>
+  <button class="big-btn primary" id="daily-btn">Today's 10 words<small id="daily-sub">A short round: meet, match, write, build sentences</small></button>
+  <button class="big-btn" id="topics-btn">Choose a topic<small id="topics-sub">22 topics</small></button>
+  <button class="big-btn" id="custom-btn">My own words<small>Type your own pairs — homework, spellings</small></button>
+  <button class="big-btn" id="progress-btn">Progress<small id="progress-sub">See how many words you know</small></button>
+</div>
+
+<!-- TOPICS -->
+<div id="topics-screen" class="screen">
+  <div class="practice-header">
+    <button class="btn-hud" id="back-topics-btn">← Back</button>
+    <h2>Choose a topic</h2>
+  </div>
+  <div id="topic-list"></div>
+</div>
+
+<!-- SETS WITHIN A TOPIC -->
+<div id="sets-screen" class="screen">
+  <div class="practice-header">
+    <button class="btn-hud" id="back-sets-btn">← Back</button>
+    <h2 id="sets-title">Topic</h2>
+  </div>
+  <p class="game-desc" id="sets-note"></p>
+  <div id="set-list"></div>
+</div>
+
+<!-- MY OWN WORDS -->
+<div id="setup-screen" class="screen">
+  <div class="practice-header">
+    <button class="btn-hud" id="back-setup-btn">← Back</button>
+    <h2>My own words</h2>
+  </div>
   <p class="game-desc">Enter word pairs — English left, Swedish right.</p>
   <div class="col-labels"><span>ENGLISH</span><span>SWEDISH</span></div>
   <div id="word-inputs"></div>
@@ -102,6 +178,22 @@
   </div>
 </div>
 
+<!-- MEET A NEW WORD -->
+<div id="meet-screen" class="screen">
+  <div class="practice-header">
+    <button class="btn-hud" id="back-meet-btn">← Back</button>
+    <h2 id="meet-count">New word</h2>
+  </div>
+  <p class="step-dots" id="step-meet"></p>
+  <div class="meet-card">
+    <div class="meet-en" id="meet-en"></div>
+    <div class="meet-sv" id="meet-sv"></div>
+    <button class="btn-say" id="meet-say-btn">🔊 Hear it</button>
+    <p class="meet-ex" id="meet-ex"></p>
+  </div>
+  <button class="practice-check-btn" id="meet-next-btn">Got it →</button>
+</div>
+
 <!-- MEMORY GAME -->
 <div id="game-screen" class="screen">
   <div id="hud">
@@ -111,32 +203,64 @@
     <button class="btn-hud" id="restart-btn">↺ Restart</button>
     <button class="btn-hud" id="back-btn">← Back</button>
   </div>
+  <p class="step-dots" id="step-memory"></p>
   <div id="board"></div>
 </div>
 
-<!-- PRACTICE ENGLISH -->
-<div id="practice-en-screen" class="screen">
+<!-- TYPING PRACTICE -->
+<div id="typing-screen" class="screen">
   <div class="practice-header">
-    <button class="btn-hud" id="back-pen-btn">← Back</button>
-    <h2>Write the Swedish translation</h2>
+    <button class="btn-hud" id="back-typing-btn">← Back</button>
+    <h2 id="typing-title">Write the translation</h2>
   </div>
-  <div id="pen-rows"></div>
-  <button class="practice-check-btn" id="pen-check-btn">Check answers</button>
-  <div class="practice-result" id="pen-result"></div>
+  <p class="step-dots" id="step-typing"></p>
+  <div id="typing-rows"></div>
+  <button class="practice-check-btn" id="typing-check-btn">Check answers</button>
+  <div class="practice-result" id="typing-result"></div>
+  <button class="practice-check-btn" id="typing-next-btn" style="display:none">Next →</button>
 </div>
 
-<!-- PRACTICE SWEDISH -->
-<div id="practice-sv-screen" class="screen">
+<!-- SENTENCE TASKS -->
+<div id="sentence-screen" class="screen">
   <div class="practice-header">
-    <button class="btn-hud" id="back-psv-btn">← Back</button>
-    <h2>Write the English translation</h2>
+    <button class="btn-hud" id="back-sentence-btn">← Back</button>
+    <h2 id="sentence-count">Build a sentence</h2>
   </div>
-  <div id="psv-rows"></div>
-  <button class="practice-check-btn" id="psv-check-btn">Check answers</button>
-  <div class="practice-result" id="psv-result"></div>
+  <p class="step-dots" id="step-sentence"></p>
+  <p class="task-label" id="sent-label"></p>
+  <div class="sentence-box" id="sent-text"></div>
+  <div class="chip-area slot-area" id="sent-slots" style="display:none"></div>
+  <div class="chip-area" id="sent-bank"></div>
+  <div class="practice-result" id="sent-result"></div>
+  <button class="practice-check-btn" id="sent-next-btn" style="display:none">Next →</button>
 </div>
 
-<!-- WIN -->
+<!-- SUMMARY -->
+<div id="summary-screen" class="screen">
+  <h2>Round finished! 🎉</h2>
+  <p id="summary-line"></p>
+  <div class="sum-list" id="summary-words"></div>
+  <div class="btn-row">
+    <button class="btn-start-mem" id="again-btn">Another round</button>
+    <button class="btn-clear" id="summary-home-btn">Home</button>
+  </div>
+</div>
+
+<!-- PROGRESS -->
+<div id="progress-screen" class="screen">
+  <div class="practice-header">
+    <button class="btn-hud" id="back-progress-btn">← Back</button>
+    <h2>Progress</h2>
+  </div>
+  <div class="stat-row">
+    <div class="stat"><strong id="stat-learned">0</strong><span>WORDS LEARNED</span></div>
+    <div class="stat"><strong id="stat-started">0</strong><span>STARTED</span></div>
+    <div class="stat"><strong id="stat-streak">0</strong><span>DAY STREAK</span></div>
+  </div>
+  <div id="progress-list"></div>
+</div>
+
+<!-- WIN (single memory game) -->
 <div id="win-screen" class="screen">
   <h2>You won! 🎉</h2>
   <p id="win-msg"></p>
@@ -149,67 +273,247 @@
 </div>
 
 <script>
+/* == VOCAB START == */
+// Generated from vocabulary/everyday-english-500.json by tools/build_vocab.py.
+// Edit the JSON and re-run the script -- do not edit the words below by hand.
+const VOCAB_SECTIONS=[
+{n:1,name:"Sentence glue: joining words and connectives",note:"The single biggest reason a child's sentences stay short. These words let two ideas live in one sentence. Teach these first.",w:[
+["and","och","I have a cat and a dog."],["but","men","It was cold, but I was happy."],["or","eller","Do you want milk or juice?"],["so","så","It was late, so we went home."],["because","därför att","I am tired because I woke up early."],["if","om","If it rains, we stay inside."],["when","när","I read when I go to bed."],["while","medan","She sang while she cooked."],["after","efter","We play after school."],["before","innan","Wash your hands before dinner."],["until","tills","Wait here until I come back."],["as soon as","så fort","Call me as soon as you get home."],["since","ända sedan","I have been here since Monday."],["although","fast","Although he was tired, he kept running."],["even though","trots att","She went out even though it was raining."],["unless","om inte","We cannot start unless everyone is here."],["than","än","My bag is heavier than yours."],["that","att","I think that it is a good idea."],["so that","så att","Speak slowly so that I understand."],["also","också","He also plays the guitar."],["besides","dessutom","It is late. Besides, I am tired."],["instead","istället","I did not walk. I took the bus instead."],["however","dock","It was cheap. However, it broke."],["then","då","First we eat, then we play."],["first","först","First, put on your shoes."],["finally","till slut","Finally, we found the key."],["for example","till exempel","I like fruit, for example apples."],["anyway","i alla fall","It was cold, but we went anyway."]
+]},
+{n:2,name:"Question words",note:"A child who can ask a question can keep a conversation going. Each one is a ready-made sentence opener.",w:[
+["who","vem","Who is at the door?"],["what","vad","What are you doing?"],["where","var","Where do you live?"],["why","varför","Why are you laughing?"],["how","hur","How do you spell it?"],["which","vilken","Which one do you want?"],["whose","vems","Whose jacket is this?"],["how many","hur många","How many brothers do you have?"],["how much","hur mycket","How much does it cost?"],["how old","hur gammal","How old is your sister?"],["how long","hur länge","How long did you wait?"],["how often","hur ofta","How often do you train?"],["what kind of","vad för sorts","What kind of music do you like?"],["what time","hur dags","What time does it start?"],["can I","får jag","Can I borrow your pen?"]
+]},
+{n:3,name:"Pronouns and pointing words",note:"The subjects and objects every sentence needs. Object forms (me, him, them) are the ones children skip.",w:[
+["I","jag",""],["you","du",""],["he","han",""],["she","hon",""],["it","den, det",""],["we","vi",""],["they","de",""],["me","mig",""],["him","honom",""],["her","henne",""],["us","oss",""],["them","dem",""],["my","min",""],["your","din",""],["his","hans",""],["our","vår",""],["their","deras",""],["this","den här",""],["that one","den där",""],["these","de här",""],["someone","någon",""],["something","något",""]
+]},
+{n:4,name:"Prepositions and place words",note:"Where things are, and how verbs attach to the rest of the sentence. Best learned as short phrases, not single words.",w:[
+["in","i","in the box"],["on","på","on the table"],["at","vid","at school"],["to","till","go to bed"],["from","från","a letter from Anna"],["of","av","a glass of milk"],["with","med","with my friend"],["without","utan","without sugar"],["for","för","a present for you"],["about","om (ämne)","a book about horses"],["over","över","over the bridge"],["under","under","under the bed"],["above","ovanför","above the door"],["below","nedanför","below the window"],["between","mellan","between the trees"],["behind","bakom","behind the house"],["in front of","framför","in front of me"],["next to","bredvid","next to the door"],["near","nära","near the school"],["inside","inuti","inside the bag"],["outside","utanför","outside the door"],["up","upp","up the stairs"],["down","ner","down the hill"],["around","runt","around the corner"],["through","genom","through the window"],["across","tvärs över","across the street"],["into","in i","into the water"],["out of","ut ur","out of the car"]
+]},
+{n:5,name:"Time words",note:"When something happened. These turn a bare verb into a story with an order of events.",w:[
+["today","idag",""],["tomorrow","imorgon",""],["yesterday","igår",""],["tonight","ikväll",""],["now","nu",""],["soon","snart",""],["later","senare",""],["early","tidigt",""],["late","sent",""],["again","igen",""],["still","fortfarande",""],["already","redan",""],["yet","ännu",""],["ago","för ... sedan","",["sedan", "för sedan"]],["next","nästa",""],["last","förra",""],["morning","morgon",""],["afternoon","eftermiddag",""],["evening","kväll",""],["night","natt",""],["day","dag",""],["week","vecka",""],["weekend","helg",""],["month","månad",""],["year","år",""],["hour","timme",""]
+]},
+{n:6,name:"How much and how often",note:"Quantity and frequency words. They add detail without needing a new sentence.",w:[
+["always","alltid",""],["usually","oftast",""],["often","ofta",""],["sometimes","ibland",""],["never","aldrig",""],["once","en gång",""],["twice","två gånger",""],["many","många",""],["much","mycket",""],["a lot of","en massa","",["mycket", "massa"]],["few","ett fåtal",""],["little","lite",""],["some","några",""],["any","något alls",""],["all","alla",""],["nothing","ingenting",""],["everyone","var och en",""],["enough","tillräckligt",""],["more","mer",""],["less","mindre",""],["only","bara",""],["both","båda",""]
+]},
+{n:7,name:"Helper verbs (modals)",note:"The words that turn a verb into a question, a plan, a rule or a polite request. High value per word.",w:[
+["can","kan","I can swim."],["could","skulle kunna","Could you help me?"],["will","kommer att","I will call you tonight."],["would","skulle","I would like some water."],["should","borde","You should wear a jacket."],["must","måste","I must finish my homework."],["may","får","May I go outside?"],["might","kanske gör","It might rain later."],["have to","vara tvungen att","I have to go now.",["måste"]],["be going to","tänker","We are going to watch a film.",["ska"]],["used to","brukade","I used to live in Malmö.",["brukade göra"]],["let","låta","Let me try."]
+]},
+{n:8,name:"Core everyday verbs",note:"The verbs that carry most ordinary sentences. If a verb is missing, the sentence cannot exist.",w:[
+["be","vara",""],["have","ha",""],["do","göra",""],["make","tillverka",""],["go","åka",""],["come","komma",""],["get","få",""],["take","ta",""],["give","ge",""],["put","lägga",""],["bring","ta med",""],["use","använda",""],["keep","behålla",""],["find","hitta",""],["lose","tappa bort",""],["look","titta",""],["see","se",""],["watch","kolla på",""],["hear","höra",""],["listen","lyssna",""],["say","säga",""],["tell","berätta",""],["ask","fråga",""],["answer","svara",""],["call","ringa",""],["talk","prata",""],["eat","äta",""],["drink","dricka",""],["sleep","sova",""],["wake up","vakna",""],["wash","tvätta",""],["open","öppna",""],["close","stänga",""],["start","börja",""],["stop","sluta",""],["help","hjälpa",""]
+]},
+{n:9,name:"Moving and playing verbs",note:"Verbs for the body and for play. Easy to act out, which makes them stick.",w:[
+["walk","gå",""],["run","springa",""],["jump","hoppa",""],["climb","klättra",""],["swim","simma",""],["ride","cykla",""],["drive","köra",""],["fly","flyga",""],["throw","kasta",""],["catch","fånga",""],["push","knuffa",""],["pull","dra",""],["carry","bära",""],["fall","ramla",""],["sit","sitta",""],["stand","stå",""],["turn","vända",""],["play","leka",""],["draw","rita",""],["build","bygga",""]
+]},
+{n:10,name:"Thinking, feeling and saying verbs",note:"These open a second clause: 'I think that...', 'I hope you...'. They are how a child gets from one clause to two.",w:[
+["think","tänka",""],["know","veta",""],["understand","förstå",""],["remember","komma ihåg",""],["forget","glömma",""],["learn","lära sig",""],["teach","lära ut",""],["read","läsa",""],["write","skriva",""],["mean","betyda",""],["believe","tro",""],["guess","gissa",""],["decide","bestämma",""],["choose","välja",""],["hope","hoppas",""],["want","vilja",""],["need","behöva",""],["like","gilla",""],["love","älska",""],["hate","hata",""],["feel","känna",""],["worry","oroa sig",""],["miss","sakna",""],["enjoy","njuta av",""],["agree","hålla med",""],["promise","lova",""],["explain","förklara",""],["describe","beskriva",""],["notice","märka",""],["wonder","undra",""]
+]},
+{n:11,name:"Everyday-life verbs",note:"Shops, school, friends, things that break. The verbs behind most after-school stories.",w:[
+["buy","köpa",""],["sell","sälja",""],["pay","betala",""],["cost","kosta",""],["work","jobba",""],["live","bo",""],["stay","stanna",""],["leave","åka iväg",""],["arrive","komma fram",""],["wait","vänta",""],["meet","träffa",""],["visit","besöka",""],["invite","bjuda in",""],["share","dela",""],["borrow","låna",""],["lend","låna ut",""],["send","skicka",""],["show","visa",""],["try","försöka",""],["practise","öva",""],["win","vinna",""],["count","räkna",""],["change","byta",""],["break","ha sönder",""],["fix","laga",""],["tidy","plocka undan",""]
+]},
+{n:12,name:"Describing words (adjectives)",note:"Detail words. A sentence with one adjective already sounds twice as grown-up.",w:[
+["big","stor",""],["small","liten",""],["long","lång",""],["short","kort",""],["tall","lång (om person)",""],["heavy","tung",""],["light","lätt (vikt)",""],["wide","bred",""],["thin","tunn",""],["thick","tjock",""],["fast","snabb",""],["slow","långsam",""],["hot","het",""],["warm","varm",""],["cold","kall",""],["cool","sval",""],["wet","blöt",""],["dry","torr",""],["clean","ren",""],["dirty","smutsig",""],["new","ny",""],["old","gammal",""],["young","ung",""],["easy","enkel",""],["hard","svår",""],["soft","mjuk",""],["loud","högljudd",""],["quiet","tyst",""],["dark","mörk",""],["bright","ljus",""],["full","full",""],["empty","tom",""],["right","rätt",""],["wrong","fel",""],["same","likadan",""],["different","annorlunda",""],["important","viktig",""],["favourite","favorit-",""],["beautiful","vacker",""],["ugly","ful",""],["kind","snäll",""],["funny","rolig",""],["strange","konstig",""],["ready","klar",""],["careful","försiktig",""]
+]},
+{n:13,name:"Feelings",note:"How she feels, and how other people feel. The vocabulary of 'I feel ... because ...'.",w:[
+["happy","glad",""],["sad","ledsen",""],["angry","arg",""],["afraid","rädd",""],["tired","trött",""],["hungry","hungrig",""],["thirsty","törstig",""],["bored","uttråkad",""],["excited","taggad",""],["surprised","förvånad",""],["worried","orolig",""],["proud","stolt",""],["shy","blyg",""],["lonely","ensam",""],["brave","modig",""],["calm","lugn",""],["confused","förvirrad",""],["sick","sjuk",""]
+]},
+{n:14,name:"Adverbs and little words that add colour",note:"Dropped into a sentence she already knows, these change the meaning without new grammar.",w:[
+["very","väldigt",""],["really","verkligen",""],["quite","ganska",""],["almost","nästan",""],["too","alltför",""],["just","precis",""],["even","till och med",""],["well","bra",""],["badly","dåligt",""],["quickly","snabbt",""],["slowly","långsamt",""],["carefully","försiktigt",""],["suddenly","plötsligt",""],["probably","förmodligen",""],["definitely","absolut",""],["together","tillsammans",""],["alone","själv",""],["away","bort",""],["back","tillbaka",""],["here","här",""],["there","där",""],["maybe","kanske",""]
+]},
+{n:15,name:"People and family",note:"Who the sentences are about.",w:[
+["mum","mamma",""],["dad","pappa",""],["parents","föräldrar",""],["sister","syster",""],["brother","bror",""],["grandma","mormor",""],["grandpa","morfar",""],["aunt","faster",""],["uncle","farbror",""],["cousin","kusin",""],["family","familj",""],["friend","kompis",""],["neighbour","granne",""],["teacher","lärare",""],["classmate","klasskompis",""],["child","barn",""],["people","folk",""],["name","namn",""],["birthday","födelsedag",""],["party","kalas",""]
+]},
+{n:16,name:"Home and everyday things",note:"The nouns in reach while she is talking at home.",w:[
+["house","hus",""],["home","hem",""],["room","rum",""],["kitchen","kök",""],["bathroom","badrum",""],["bedroom","sovrum",""],["garden","trädgård",""],["door","dörr",""],["window","fönster",""],["floor","golv",""],["wall","vägg",""],["stairs","trappa",""],["bed","säng",""],["table","bord",""],["chair","stol",""],["sofa","soffa",""],["lamp","lampa",""],["cupboard","skåp",""],["fridge","kylskåp",""],["key","nyckel",""],["clock","klocka",""],["phone","telefon",""],["towel","handduk",""],["pillow","kudde",""]
+]},
+{n:17,name:"School",note:"Where most of her English day happens.",w:[
+["school","skola",""],["class","klass",""],["lesson","lektion",""],["homework","läxa",""],["book","bok",""],["page","sida",""],["word","ord",""],["sentence","mening",""],["story","saga",""],["a question","en fråga",""],["pen","penna",""],["pencil","blyertspenna",""],["rubber","suddgummi",""],["ruler","linjal",""],["paper","papper",""],["bag","väska",""],["break (at school)","rast",""],["test","prov",""]
+]},
+{n:18,name:"Food and drink",note:"Daily, repeatable, easy to practise at the table.",w:[
+["food","mat",""],["breakfast","frukost",""],["lunch","lunch",""],["dinner","middag",""],["snack","mellanmål",""],["bread","bröd",""],["cheese","ost",""],["milk","mjölk",""],["egg","ägg",""],["meat","kött",""],["chicken","kyckling",""],["fish","fisk",""],["potato","potatis",""],["soup","soppa",""],["sandwich","smörgås",""],["fruit","frukt",""],["apple","äpple",""],["berry","bär",""],["vegetable","grönsak",""],["water","vatten",""]
+]},
+{n:19,name:"Body, clothes and feeling ill",note:"Needed for anything from getting dressed to saying what hurts.",w:[
+["head","huvud",""],["hair","hår",""],["face","ansikte",""],["eye","öga",""],["ear","öra",""],["mouth","mun",""],["tooth","tand",""],["hand","hand",""],["arm","arm",""],["leg","ben",""],["foot","fot",""],["stomach","mage",""],["clothes","kläder",""],["trousers","byxor",""],["jacket","jacka",""],["shoes","skor",""],["socks","strumpor",""],["doctor","läkare",""]
+]},
+{n:20,name:"Weather, nature and animals",note:"Small talk starts with the weather, and children's stories are full of animals.",w:[
+["weather","väder",""],["sun","sol",""],["rain","regn",""],["snow","snö",""],["wind","vind",""],["cloud","moln",""],["sky","himmel",""],["tree","träd",""],["flower","blomma",""],["grass","gräs",""],["forest","skog",""],["lake","sjö",""],["sea","hav",""],["mountain","berg",""],["beach","strand",""],["stone","sten",""],["animal","djur",""],["bird","fågel",""],["horse","häst",""],["insect","insekt",""]
+]},
+{n:21,name:"Town, travel and money",note:"Out of the house: shops, buses, holidays.",w:[
+["town","stad",""],["street","gata",""],["road","väg",""],["shop","affär",""],["money","pengar",""],["price","pris",""],["cheap","billig",""],["expensive","dyr",""],["ticket","biljett",""],["bus","buss",""],["train","tåg",""],["car","bil",""],["bike","cykel",""],["plane","flygplan",""],["station","station",""],["hospital","sjukhus",""],["park","park",""],["cinema","bio",""],["holiday","lov",""],["trip","resa",""]
+]},
+{n:22,name:"Everyday phrases",note:"Whole chunks, learned as one unit. They buy time and keep a conversation alive while she builds the next sentence.",w:[
+["hello","hej",""],["goodbye","hej då",""],["see you","vi ses",""],["please","snälla",""],["thank you","tack",""],["you're welcome","varsågod",""],["excuse me","ursäkta",""],["sorry","förlåt",""],["good luck","lycka till",""],["well done","bra jobbat",""],["never mind","strunt i det",""],["no problem","inga problem",""],["by the way","förresten",""],["I mean","jag menar",""],["me too","jag också",""],["I don't know","jag vet inte",""]
+]},
+];
+/* == VOCAB END == */
+
+/* ---------- word bank ---------- */
+const VOCAB=[];
+VOCAB_SECTIONS.forEach(s=>s.w.forEach((row,i)=>{
+  VOCAB.push({en:row[0],sv:row[1],ex:row[2]||'',acc:row[3]||[],sec:s.n,pos:i});
+}));
+const SECTION_BY_N={};VOCAB_SECTIONS.forEach(s=>SECTION_BY_N[s.n]=s);
+function sectionWords(n){return VOCAB.filter(w=>w.sec===n);}
+function setsOf(n){const ws=sectionWords(n),out=[];for(let i=0;i<ws.length;i+=10)out.push(ws.slice(i,i+10));return out;}
+
+/* ---------- progress (localStorage, never fatal) ---------- */
+const STORE_KEY='alice-vocab-v1';
+const WAIT=[0,1,2,4,8];               // days to wait after reaching box 1..5
+const LEARNED_BOX=5;
+function todayNum(){const d=new Date();return Math.floor((d.getTime()-d.getTimezoneOffset()*60000)/86400000);}
+function loadStore(){
+  try{const raw=localStorage.getItem(STORE_KEY);if(raw){const s=JSON.parse(raw);if(s&&s.words)return s;}}catch(e){}
+  return{version:1,words:{},streak:0,lastPlayed:null};
+}
+let store=loadStore();
+function saveStore(){try{localStorage.setItem(STORE_KEY,JSON.stringify(store));}catch(e){}}
+function recOf(en){return store.words[en];}
+function boxOf(en){const r=store.words[en];return r?r.box:0;}
+function grade(en,correct){
+  const t=todayNum();
+  let r=store.words[en];
+  if(!r){r={box:1,due:t,seen:0,wrong:0,last:t};store.words[en]=r;}
+  if(correct){if(r.box<LEARNED_BOX)r.box++;r.due=t+WAIT[r.box-1];}
+  else{r.box=1;r.due=t;r.wrong++;}
+  r.seen++;r.last=t;
+}
+function dueCount(){const t=todayNum();return VOCAB.filter(w=>{const r=store.words[w.en];return r&&r.box<LEARNED_BOX&&r.due<=t;}).length;}
+function learnedCount(list){return list.filter(w=>boxOf(w.en)>=LEARNED_BOX).length;}
+function startedCount(list){return list.filter(w=>boxOf(w.en)>0).length;}
+
+/* Ten words: the most overdue first (max 7, any box, so easy and hard words mix),
+   topped up with new words in teaching order. */
+function dailyRound(){
+  const t=todayNum(),out=[],taken={};
+  VOCAB.filter(w=>{const r=store.words[w.en];return r&&r.box<LEARNED_BOX&&r.due<=t;})
+    .sort((a,b)=>{const ra=store.words[a.en],rb=store.words[b.en];return ra.due-rb.due||ra.box-rb.box;})
+    .slice(0,7).forEach(w=>{out.push(w);taken[w.en]=1;});
+  for(const w of VOCAB){if(out.length>=10)break;if(!store.words[w.en]&&!taken[w.en]){out.push(w);taken[w.en]=1;}}
+  if(out.length<10){
+    VOCAB.filter(w=>store.words[w.en]&&!taken[w.en])
+      .sort((a,b)=>store.words[a.en].last-store.words[b.en].last)
+      .slice(0,10-out.length).forEach(w=>{out.push(w);taken[w.en]=1;});
+  }
+  return out;
+}
+
+/* ---------- answer checking ---------- */
+function normalise(s){
+  return (s||'').toLowerCase().replace(/[’']/g,"'").replace(/\s+/g,' ').trim().replace(/[.!?,]+$/,'').trim();
+}
+function variants(text){
+  const out={};
+  const add=v=>{v=normalise(v);if(!v)return;out[v]=1;
+    const bare=v.replace(/^(att|to|a|an|the)\s+/,'');if(bare)out[bare]=1;};
+  const plain=(text||'').replace(/\([^)]*\)/g,' ');
+  [text||'',plain].forEach(t=>{
+    add(t);
+    t.split(/[,/]/).forEach(part=>{
+      add(part);
+      add(part.replace(/\.\.\.|…/g,' '));
+    });
+  });
+  return out;
+}
+/* dir 'en' = English shown, Swedish expected. dir 'sv' = Swedish shown, English expected. */
+function isCorrect(input,word,dir){
+  const v=normalise(input);
+  if(!v)return false;
+  const accepted=variants(dir==='en'?word.sv:word.en);
+  if(dir==='en')(word.acc||[]).forEach(a=>Object.assign(accepted,variants(a)));
+  if(accepted[v])return true;
+  return !!accepted[v.replace(/^(att|to|a|an|the)\s+/,'')];
+}
+function answerOf(word,dir){return dir==='en'?word.sv:word.en;}
+
+/* ---------- state ---------- */
 const cheers=[["Fantastic!","Great match!"],["Superb!","Keep going!"],["Brilliant!","You're on fire!"],
   ["Amazing!","Perfect pair!"],["Well done!","One more step closer!"],["Excellent!","You rock!"],
   ["Outstanding!","Incredible memory!"],["Wow!","That was fast!"],["Great job!","Nothing can stop you!"],["Perfecto!","You nailed it!"]];
 
 let words=[],score=0,pairs=0,timerSec=0,timerInterval=null,selected=[],locked=false;
+let session=null,meetQueue=[],meetIdx=0,sentTasks=[],sentIdx=0,sentState=null,typingDir='mixed';
 
 function show(id){document.querySelectorAll('.screen').forEach(s=>s.style.display='none');document.getElementById(id).style.display='block';}
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function escapeHtml(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 
-function buildInputs(){
-  const c=document.getElementById('word-inputs');
-  for(let i=0;i<10;i++){
-    const row=document.createElement('div');row.className='word-row';
-    row.innerHTML=`<input type="text" placeholder="e.g. apple" data-idx="${i}" data-lang="en" autocomplete="off" autocorrect="off" autocapitalize="none">
-                   <input type="text" placeholder="e.g. äpple" data-idx="${i}" data-lang="sv" autocomplete="off" autocorrect="off" autocapitalize="none">`;
-    c.appendChild(row);
-  }
+/* ---------- session engine ---------- */
+function startSession(list,label,source){
+  words=list.map((w,i)=>({en:w.en,sv:w.sv,ex:w.ex||'',acc:w.acc||[],sec:w.sec,id:i}));
+  session={label:label,source:source,result:{},startBox:{},steps:[],step:-1};
+  words.forEach(w=>session.startBox[w.en]=boxOf(w.en));
+  if(words.some(w=>boxOf(w.en)===0))session.steps.push('meet');
+  session.steps.push('memory','typing');
+  if(words.some(w=>w.ex))session.steps.push('sentence');
+  session.steps.push('summary');
+  nextStep();
 }
-
-function getWords(){
-  const en=document.querySelectorAll('[data-lang="en"]'),sv=document.querySelectorAll('[data-lang="sv"]');
-  const w=[];let hasSingle=false;
-  for(let i=0;i<10;i++){const e=en[i].value.trim(),s=sv[i].value.trim();if(e&&s)w.push({en:e,sv:s,id:i});else if(e||s)hasSingle=true;}
-  return{w,hasSingle};
+function nextStep(){
+  session.step++;
+  const s=session.steps[session.step];
+  if(s==='meet')startMeet();
+  else if(s==='memory')startGame();
+  else if(s==='typing')startTyping('mixed');
+  else if(s==='sentence')startSentences();
+  else showSummary();
 }
-
-function validate(){
-  const{w,hasSingle}=getWords();
-  if(hasSingle){document.getElementById('error-msg').textContent='Every English word needs a Swedish translation. Please complete or clear incomplete pairs.';return null;}
-  if(w.length<2){document.getElementById('error-msg').textContent='Please enter at least 2 word pairs to start.';return null;}
-  document.getElementById('error-msg').textContent='';return w;
+function stepLabel(){
+  if(!session)return '';
+  const n=session.steps.filter(s=>s!=='summary').length;
+  return 'Step '+(session.step+1)+' of '+n+' · '+session.label;
 }
-
-function setBoardColumns(n){
-  // Pick columns to look good on phone and tablet
-  const cols=n<=3?n:n<=6?3:n<=8?4:5;
-  document.getElementById('board').style.gridTemplateColumns=`repeat(${cols},1fr)`;
+function setStep(id){const el=document.getElementById(id);if(el)el.textContent=session?stepLabel():'';}
+function mark(en,correct){
+  if(!session)return;
+  const r=session.result[en]||(session.result[en]={right:0,wrong:0});
+  if(correct)r.right++;else r.wrong++;
 }
+function endSession(){session=null;show('home-screen');refreshHome();}
 
-document.getElementById('clear-btn').addEventListener('click',()=>{
-  document.querySelectorAll('#word-inputs input').forEach(i=>i.value='');
-  document.getElementById('error-msg').textContent='';
+/* ---------- meet new words ---------- */
+function startMeet(){
+  meetQueue=words.filter(w=>boxOf(w.en)===0);
+  meetIdx=0;
+  if(!meetQueue.length){nextStep();return;}
+  showMeet();
+}
+function showMeet(){
+  const w=meetQueue[meetIdx];
+  document.getElementById('meet-count').textContent='New word '+(meetIdx+1)+' of '+meetQueue.length;
+  document.getElementById('meet-en').textContent=w.en;
+  document.getElementById('meet-sv').textContent=w.sv;
+  document.getElementById('meet-ex').textContent=w.ex||'';
+  document.getElementById('meet-next-btn').textContent=(meetIdx===meetQueue.length-1)?'Start playing →':'Got it →';
+  setStep('step-meet');show('meet-screen');
+  pronounce(w.ex?w.en+'. '+w.ex:w.en);
+}
+document.getElementById('meet-say-btn').addEventListener('click',()=>{
+  const w=meetQueue[meetIdx];pronounce(w.ex?w.en+'. '+w.ex:w.en);
 });
-document.getElementById('start-btn').addEventListener('click',()=>{const w=validate();if(!w)return;words=w;startGame();});
-document.getElementById('back-btn').addEventListener('click',()=>{clearInterval(timerInterval);show('setup-screen');});
-document.getElementById('restart-btn').addEventListener('click',startGame);
-document.getElementById('play-again-btn').addEventListener('click',()=>show('setup-screen'));
+document.getElementById('meet-next-btn').addEventListener('click',()=>{
+  meetIdx++;
+  if(meetIdx>=meetQueue.length)nextStep();else showMeet();
+});
+document.getElementById('back-meet-btn').addEventListener('click',endSession);
 
+/* ---------- memory game ---------- */
 function startGame(){
   score=0;pairs=0;timerSec=0;selected=[];locked=false;
   updateHUD();clearInterval(timerInterval);
   timerInterval=setInterval(()=>{timerSec++;updateHUD();},1000);
-  show('game-screen');buildBoard();
+  setStep('step-memory');show('game-screen');buildBoard();
 }
-
 function updateHUD(){
   document.getElementById('score-val').textContent=score;
   const m=Math.floor(timerSec/60),s=timerSec%60;
   document.getElementById('timer-val').textContent=`${m}:${s.toString().padStart(2,'0')}`;
   document.getElementById('pairs-val').textContent=`${pairs}/${words.length}`;
 }
-
+function setBoardColumns(n){
+  // Pick columns to look good on phone and tablet
+  const cols=n<=3?n:n<=6?3:n<=8?4:5;
+  document.getElementById('board').style.gridTemplateColumns=`repeat(${cols},1fr)`;
+}
 function buildBoard(){
   const board=document.getElementById('board');board.innerHTML='';
   const cards=[];
@@ -222,9 +526,9 @@ function buildBoard(){
     div.addEventListener('click',()=>onCardClick(div,c));board.appendChild(div);
   });
 }
-
-function pronounce(word){const u=new SpeechSynthesisUtterance(word);u.lang='en-US';speechSynthesis.cancel();speechSynthesis.speak(u);}
-
+function pronounce(text){
+  try{const u=new SpeechSynthesisUtterance(text);u.lang='en-US';speechSynthesis.cancel();speechSynthesis.speak(u);}catch(e){}
+}
 function onCardClick(el,card){
   if(locked||el.classList.contains('matched')||el.classList.contains('selected'))return;
   if(selected.length===0&&card.type!=='english')return;
@@ -234,22 +538,22 @@ function onCardClick(el,card){
   if(selected.length===2){
     locked=true;const[a,b]=selected;
     if(a.card.id===b.card.id&&a.card.type!==b.card.type){
-      score+=2;pairs++;
+      score+=2;pairs++;mark(words[a.card.id].en,true);
       setTimeout(()=>{
         a.el.classList.remove('selected');b.el.classList.remove('selected');
         a.el.classList.add('matched');b.el.classList.add('matched');
         updateHUD();selected=[];locked=false;showCheer(pairs-1);
-        if(pairs===words.length)setTimeout(showWin,1200);
+        if(pairs===words.length)setTimeout(finishMemory,1200);
       },400);
     }else{
       score=Math.max(0,score-1);
+      mark(words[a.card.id].en,false);mark(words[b.card.id].en,false);
       a.el.classList.add('flipped-wrong');b.el.classList.add('flipped-wrong');
       updateHUD();
       setTimeout(()=>{a.el.classList.remove('selected','flipped-wrong');b.el.classList.remove('selected','flipped-wrong');selected=[];locked=false;},900);
     }
   }
 }
-
 function showCheer(idx){
   const[main,sub]=cheers[idx%cheers.length];
   const banner=document.getElementById('cheer-banner');
@@ -257,63 +561,309 @@ function showCheer(idx){
   document.getElementById('cheer-sub').textContent=sub;
   banner.style.display='block';clearTimeout(banner._t);banner._t=setTimeout(()=>banner.style.display='none',1400);
 }
-
-function showWin(){
+function finishMemory(){
   clearInterval(timerInterval);
+  if(session)nextStep();else showWin();
+}
+function showWin(){
   const m=Math.floor(timerSec/60),s=timerSec%60;
   document.getElementById('win-msg').textContent=`Score: ${score} points · Time: ${m}:${s.toString().padStart(2,'0')}`;
   show('win-screen');
 }
+document.getElementById('restart-btn').addEventListener('click',startGame);
+document.getElementById('back-btn').addEventListener('click',()=>{
+  clearInterval(timerInterval);
+  if(session)endSession();else show('setup-screen');
+});
+document.getElementById('play-again-btn').addEventListener('click',()=>show('setup-screen'));
 
-// Practice English
-document.getElementById('practice-en-btn').addEventListener('click',()=>{
-  const w=validate();if(!w)return;words=w;
-  const cont=document.getElementById('pen-rows');cont.innerHTML='';
-  words.forEach(word=>{
+/* ---------- typing practice ---------- */
+function startTyping(dir){
+  typingDir=dir;
+  const cont=document.getElementById('typing-rows');cont.innerHTML='';
+  document.getElementById('typing-title').textContent =
+    dir==='en'?'Write the Swedish translation':dir==='sv'?'Write the English translation':'Write the missing word';
+  words.forEach(w=>{
+    // In a session: words she has met a few times are asked the hard way round (Swedish → English).
+    const d=dir==='mixed'?(boxOf(w.en)>=3?'sv':'en'):dir;
     const row=document.createElement('div');row.className='practice-row';
-    row.innerHTML=`<div class="practice-card english">${word.en}</div>
-                   <input class="practice-input" type="text" placeholder="Swedish…" data-answer="${word.sv.toLowerCase()}" autocomplete="off" autocorrect="off" autocapitalize="none">`;
+    const promptText=d==='en'?w.en:w.sv;
+    row.innerHTML=`<div class="practice-card ${d==='en'?'english':'swedish'}">${escapeHtml(promptText)}</div>
+                   <input class="practice-input" type="text" placeholder="${d==='en'?'Swedish…':'English…'}" data-idx="${w.id}" data-dir="${d}" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false">`;
     cont.appendChild(row);
   });
-  document.getElementById('pen-result').innerHTML='';
-  show('practice-en-screen');
-});
-document.getElementById('pen-check-btn').addEventListener('click',()=>{
+  document.getElementById('typing-result').innerHTML='';
+  document.getElementById('typing-next-btn').style.display='none';
+  document.getElementById('typing-check-btn').style.display='block';
+  setStep('step-typing');show('typing-screen');
+}
+document.getElementById('typing-check-btn').addEventListener('click',()=>{
   let c=0,w=0;
-  document.querySelectorAll('#pen-rows .practice-input').forEach(inp=>{
-    const v=inp.value.trim().toLowerCase(),a=inp.dataset.answer;
+  document.querySelectorAll('#typing-rows .practice-input').forEach(inp=>{
+    const word=words[+inp.dataset.idx],dir=inp.dataset.dir;
     inp.classList.remove('correct','wrong');
-    if(v===a){inp.classList.add('correct');c++;}else{inp.classList.add('wrong');w++;}
+    const hint=inp.parentElement.querySelector('.answer-hint');
+    if(hint)hint.remove();
+    if(isCorrect(inp.value,word,dir)){inp.classList.add('correct');c++;mark(word.en,true);}
+    else{
+      inp.classList.add('wrong');w++;mark(word.en,false);
+      const p=document.createElement('div');p.className='answer-hint';p.textContent='→ '+answerOf(word,dir);
+      inp.parentElement.appendChild(p);
+    }
   });
-  document.getElementById('pen-result').innerHTML=`<span class="cc">${c} correct</span> · <span class="wc">${w} wrong</span>`;
+  document.getElementById('typing-result').innerHTML=`<span class="cc">${c} correct</span> · <span class="wc">${w} wrong</span>`;
+  if(session){
+    document.getElementById('typing-check-btn').style.display='none';
+    document.getElementById('typing-next-btn').style.display='block';
+  }
 });
-document.getElementById('back-pen-btn').addEventListener('click',()=>show('setup-screen'));
+document.getElementById('typing-next-btn').addEventListener('click',()=>nextStep());
+document.getElementById('back-typing-btn').addEventListener('click',()=>{if(session)endSession();else show('setup-screen');});
 
-// Practice Swedish
-document.getElementById('practice-sv-btn').addEventListener('click',()=>{
-  const w=validate();if(!w)return;words=w;
-  const cont=document.getElementById('psv-rows');cont.innerHTML='';
-  words.forEach(word=>{
-    const row=document.createElement('div');row.className='practice-row';
-    row.innerHTML=`<div class="practice-card swedish">${word.sv}</div>
-                   <input class="practice-input" type="text" placeholder="English…" data-answer="${word.en.toLowerCase()}" autocomplete="off" autocorrect="off" autocapitalize="none">`;
-    cont.appendChild(row);
+/* ---------- sentence tasks ---------- */
+function gapRegex(word){
+  const esc=word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  return new RegExp('(^|[^A-Za-z])('+esc+')([^A-Za-z]|$)','i');
+}
+function buildSentenceTasks(){
+  const pool=shuffle(words.filter(w=>w.ex)).slice(0,3);
+  return pool.map((w,i)=>{
+    const tokens=w.ex.split(' ');
+    const canOrder=tokens.length>=3&&tokens.length<=9;
+    if(i%2===1&&canOrder)return{kind:'order',word:w,tokens:tokens};
+    if(gapRegex(w.en).test(w.ex))return{kind:'gap',word:w};
+    return canOrder?{kind:'order',word:w,tokens:tokens}:{kind:'gap',word:w};
   });
-  document.getElementById('psv-result').innerHTML='';
-  show('practice-sv-screen');
+}
+function startSentences(){
+  sentTasks=buildSentenceTasks();
+  sentIdx=0;
+  if(!sentTasks.length){nextStep();return;}
+  showSentence();
+}
+function showSentence(){
+  const task=sentTasks[sentIdx];
+  const bank=document.getElementById('sent-bank'),slots=document.getElementById('sent-slots');
+  bank.innerHTML='';slots.innerHTML='';
+  document.getElementById('sent-result').innerHTML='';
+  document.getElementById('sent-next-btn').style.display='none';
+  document.getElementById('sentence-count').textContent='Sentence '+(sentIdx+1)+' of '+sentTasks.length;
+  sentState={answered:false,placed:[]};
+  if(task.kind==='gap'){
+    document.getElementById('sent-label').textContent='WHICH WORD FITS?';
+    slots.style.display='none';
+    const m=task.word.ex.match(gapRegex(task.word.en));
+    const at=m.index+m[1].length;
+    document.getElementById('sent-text').innerHTML=
+      escapeHtml(task.word.ex.slice(0,at))+'<span class="gap">_____</span>'+escapeHtml(task.word.ex.slice(at+m[2].length));
+    const same=VOCAB.filter(w=>w.sec===task.word.sec&&w.en!==task.word.en&&w.ex);
+    const choices=shuffle(same).slice(0,3).map(w=>w.en);
+    choices.push(task.word.en);
+    shuffle(choices).forEach(choice=>{
+      const b=document.createElement('button');b.className='chip';b.textContent=choice;
+      b.addEventListener('click',()=>answerGap(b,choice,task));
+      bank.appendChild(b);
+    });
+  }else{
+    document.getElementById('sent-label').textContent='PUT THE WORDS IN ORDER';
+    document.getElementById('sent-text').textContent=task.word.en+' — '+task.word.sv;
+    slots.style.display='flex';
+    const order=shuffle(task.tokens.slice());
+    if(order.join(' ')===task.tokens.join(' '))order.reverse();
+    order.forEach(tok=>{
+      const b=document.createElement('button');b.className='chip';b.textContent=tok;
+      b.addEventListener('click',()=>moveChip(b,task));
+      bank.appendChild(b);
+    });
+  }
+  setStep('step-sentence');show('sentence-screen');
+}
+function answerGap(btn,choice,task){
+  if(sentState.answered)return;
+  sentState.answered=true;
+  const right=choice===task.word.en;
+  btn.classList.add(right?'correct':'wrong');
+  mark(task.word.en,right);
+  document.getElementById('sent-text').textContent=task.word.ex;
+  if(!right){
+    Array.from(document.getElementById('sent-bank').children).forEach(c=>{
+      if(c.textContent===task.word.en)c.classList.add('correct');
+    });
+  }
+  document.getElementById('sent-result').innerHTML=right
+    ?'<span class="cc">Yes! '+escapeHtml(task.word.ex)+'</span>'
+    :'<span class="wc">Nearly — the word is "'+escapeHtml(task.word.en)+'"</span>';
+  pronounce(task.word.ex);
+  document.getElementById('sent-next-btn').style.display='block';
+}
+function moveChip(chip,task){
+  if(sentState.answered)return;
+  const bank=document.getElementById('sent-bank'),slots=document.getElementById('sent-slots');
+  if(chip.parentElement===bank){chip.classList.add('placed');slots.appendChild(chip);}
+  else{chip.classList.remove('placed');bank.appendChild(chip);}
+  if(!bank.children.length)checkOrder(task);
+}
+function checkOrder(task){
+  const slots=document.getElementById('sent-slots');
+  const built=Array.from(slots.children).map(c=>c.textContent).join(' ');
+  const right=normalise(built)===normalise(task.word.ex);
+  sentState.answered=true;
+  mark(task.word.en,right);
+  Array.from(slots.children).forEach(c=>c.classList.add(right?'correct':'wrong'));
+  document.getElementById('sent-result').innerHTML=right
+    ?'<span class="cc">Perfect sentence!</span>'
+    :'<span class="wc">Almost — it is: '+escapeHtml(task.word.ex)+'</span>';
+  pronounce(task.word.ex);
+  document.getElementById('sent-next-btn').style.display='block';
+}
+document.getElementById('sent-next-btn').addEventListener('click',()=>{
+  sentIdx++;
+  if(sentIdx>=sentTasks.length)nextStep();else showSentence();
 });
-document.getElementById('psv-check-btn').addEventListener('click',()=>{
-  let c=0,w=0;
-  document.querySelectorAll('#psv-rows .practice-input').forEach(inp=>{
-    const v=inp.value.trim().toLowerCase(),a=inp.dataset.answer;
-    inp.classList.remove('correct','wrong');
-    if(v===a){inp.classList.add('correct');c++;}else{inp.classList.add('wrong');w++;}
+document.getElementById('back-sentence-btn').addEventListener('click',endSession);
+
+/* ---------- summary ---------- */
+function showSummary(){
+  const moved=[],again=[];
+  words.forEach(w=>{
+    const r=session.result[w.en];
+    if(!r)return;
+    const ok=r.wrong===0&&r.right>0;
+    grade(w.en,ok);                       // one box step per round, wherever the mistake happened
+    (ok?moved:again).push(w);
   });
-  document.getElementById('psv-result').innerHTML=`<span class="cc">${c} correct</span> · <span class="wc">${w} wrong</span>`;
+  const t=todayNum();
+  if(store.lastPlayed===t){}
+  else if(store.lastPlayed===t-1)store.streak=(store.streak||0)+1;
+  else store.streak=1;
+  store.lastPlayed=t;
+  saveStore();
+  document.getElementById('summary-line').textContent=
+    moved.length+' of '+words.length+' words right first time · '+store.streak+' day streak';
+  const box=document.getElementById('summary-words');box.innerHTML='';
+  const addGroup=(title,list,cls)=>{
+    if(!list.length)return;
+    const h=document.createElement('p');h.className='sum-head';h.textContent=title;box.appendChild(h);
+    list.forEach(w=>{
+      const d=document.createElement('div');d.className='sum-item '+cls;
+      d.innerHTML=escapeHtml(w.en)+' <span>'+escapeHtml(w.sv)+'</span>';
+      box.appendChild(d);
+    });
+  };
+  addGroup('KNOW IT BETTER NOW',moved,'up');
+  addGroup('COMING BACK SOON',again,'down');
+  show('summary-screen');
+}
+document.getElementById('again-btn').addEventListener('click',()=>{
+  const src=session?session.source:{kind:'daily'};
+  if(src.kind==='set'){
+    const list=setsOf(src.sec);
+    const next=src.idx+1;
+    if(next<list.length){startSet(src.sec,next);return;}
+    openSets(src.sec);return;
+  }
+  startSession(dailyRound(),"Today's 10",{kind:'daily'});
 });
-document.getElementById('back-psv-btn').addEventListener('click',()=>show('setup-screen'));
+document.getElementById('summary-home-btn').addEventListener('click',endSession);
+
+/* ---------- home, topics, sets, progress ---------- */
+function refreshHome(){
+  const learned=learnedCount(VOCAB),started=startedCount(VOCAB);
+  document.getElementById('home-stats').textContent=
+    learned+' of '+VOCAB.length+' words learned'+(store.streak?' · '+store.streak+' day streak':'');
+  const due=dueCount();
+  document.getElementById('daily-sub').textContent=due
+    ?(due===1?'1 word to review':due+' words to review')+(started<VOCAB.length?' + new words':'')
+    :(started<VOCAB.length?'10 new words, chosen for you':'All caught up — a mixed round');
+  document.getElementById('topics-sub').textContent=VOCAB_SECTIONS.length+' topics · '+VOCAB.length+' words';
+  document.getElementById('progress-sub').textContent=started?started+' words started':'See how many words you know';
+}
+function openTopics(){
+  const list=document.getElementById('topic-list');list.innerHTML='';
+  VOCAB_SECTIONS.forEach(s=>{
+    const ws=sectionWords(s.n),done=learnedCount(ws);
+    const b=document.createElement('button');b.className='row-btn';
+    b.innerHTML=`<div class="row-top"><span>${s.n}. ${escapeHtml(s.name)}</span><span class="row-count">${done}/${ws.length}</span></div>
+                 <div class="bar"><i style="width:${Math.round(done/ws.length*100)}%"></i></div>`;
+    b.addEventListener('click',()=>openSets(s.n));
+    list.appendChild(b);
+  });
+  show('topics-screen');
+}
+function openSets(n){
+  const s=SECTION_BY_N[n],list=setsOf(n);
+  document.getElementById('sets-title').textContent=s.name;
+  document.getElementById('sets-note').textContent=s.note;
+  const cont=document.getElementById('set-list');cont.innerHTML='';
+  list.forEach((ws,i)=>{
+    const done=learnedCount(ws);
+    const b=document.createElement('button');b.className='row-btn';
+    b.innerHTML=`<div class="row-top"><span>Set ${i+1} of ${list.length} — ${escapeHtml(ws[0].en)} … ${escapeHtml(ws[ws.length-1].en)}</span><span class="row-count">${done}/${ws.length}</span></div>
+                 <div class="bar"><i style="width:${Math.round(done/ws.length*100)}%"></i></div>`;
+    b.addEventListener('click',()=>startSet(n,i));
+    cont.appendChild(b);
+  });
+  show('sets-screen');
+}
+function startSet(n,i){
+  const ws=setsOf(n)[i];
+  startSession(ws,SECTION_BY_N[n].name+' · set '+(i+1),{kind:'set',sec:n,idx:i});
+}
+function openProgress(){
+  document.getElementById('stat-learned').textContent=learnedCount(VOCAB);
+  document.getElementById('stat-started').textContent=startedCount(VOCAB);
+  document.getElementById('stat-streak').textContent=store.streak||0;
+  const cont=document.getElementById('progress-list');cont.innerHTML='';
+  VOCAB_SECTIONS.forEach(s=>{
+    const ws=sectionWords(s.n),done=learnedCount(ws),started=startedCount(ws);
+    const d=document.createElement('div');d.className='row-btn';
+    d.innerHTML=`<div class="row-top"><span>${s.n}. ${escapeHtml(s.name)}</span><span class="row-count">${done} learned · ${started} started</span></div>
+                 <div class="bar"><i style="width:${Math.round(done/ws.length*100)}%"></i></div>`;
+    cont.appendChild(d);
+  });
+  show('progress-screen');
+}
+document.getElementById('daily-btn').addEventListener('click',()=>startSession(dailyRound(),"Today's 10",{kind:'daily'}));
+document.getElementById('topics-btn').addEventListener('click',openTopics);
+document.getElementById('custom-btn').addEventListener('click',()=>{session=null;show('setup-screen');});
+document.getElementById('progress-btn').addEventListener('click',openProgress);
+document.getElementById('back-topics-btn').addEventListener('click',()=>{refreshHome();show('home-screen');});
+document.getElementById('back-sets-btn').addEventListener('click',openTopics);
+document.getElementById('back-progress-btn').addEventListener('click',()=>{refreshHome();show('home-screen');});
+document.getElementById('back-setup-btn').addEventListener('click',()=>{refreshHome();show('home-screen');});
+
+/* ---------- my own words ---------- */
+function buildInputs(){
+  const c=document.getElementById('word-inputs');
+  for(let i=0;i<10;i++){
+    const row=document.createElement('div');row.className='word-row';
+    row.innerHTML=`<input type="text" placeholder="e.g. apple" data-idx="${i}" data-lang="en" autocomplete="off" autocorrect="off" autocapitalize="none">
+                   <input type="text" placeholder="e.g. äpple" data-idx="${i}" data-lang="sv" autocomplete="off" autocorrect="off" autocapitalize="none">`;
+    c.appendChild(row);
+  }
+}
+function getWords(){
+  const en=document.querySelectorAll('[data-lang="en"]'),sv=document.querySelectorAll('[data-lang="sv"]');
+  const w=[];let hasSingle=false;
+  for(let i=0;i<10;i++){const e=en[i].value.trim(),s=sv[i].value.trim();if(e&&s)w.push({en:e,sv:s,ex:'',acc:[],id:w.length});else if(e||s)hasSingle=true;}
+  return{w,hasSingle};
+}
+function validate(){
+  const{w,hasSingle}=getWords();
+  if(hasSingle){document.getElementById('error-msg').textContent='Every English word needs a Swedish translation. Please complete or clear incomplete pairs.';return null;}
+  if(w.length<2){document.getElementById('error-msg').textContent='Please enter at least 2 word pairs to start.';return null;}
+  document.getElementById('error-msg').textContent='';return w;
+}
+document.getElementById('clear-btn').addEventListener('click',()=>{
+  document.querySelectorAll('#word-inputs input').forEach(i=>i.value='');
+  document.getElementById('error-msg').textContent='';
+});
+document.getElementById('start-btn').addEventListener('click',()=>{const w=validate();if(!w)return;session=null;words=w;startGame();});
+document.getElementById('practice-en-btn').addEventListener('click',()=>{const w=validate();if(!w)return;session=null;words=w;startTyping('en');});
+document.getElementById('practice-sv-btn').addEventListener('click',()=>{const w=validate();if(!w)return;session=null;words=w;startTyping('sv');});
 
 buildInputs();
+refreshHome();
 </script>
 </body>
 </html>

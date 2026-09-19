@@ -533,7 +533,11 @@
         },
         {
           "en": "ago",
-          "sv": "för ... sedan"
+          "sv": "för ... sedan",
+          "accept": [
+            "sedan",
+            "för sedan"
+          ]
         },
         {
           "en": "next",
@@ -628,7 +632,11 @@
         },
         {
           "en": "a lot of",
-          "sv": "en massa"
+          "sv": "en massa",
+          "accept": [
+            "mycket",
+            "massa"
+          ]
         },
         {
           "en": "few",
@@ -728,17 +736,26 @@
         {
           "en": "have to",
           "sv": "vara tvungen att",
-          "example": "I have to go now."
+          "example": "I have to go now.",
+          "accept": [
+            "måste"
+          ]
         },
         {
           "en": "be going to",
           "sv": "tänker",
-          "example": "We are going to watch a film."
+          "example": "We are going to watch a film.",
+          "accept": [
+            "ska"
+          ]
         },
         {
           "en": "used to",
           "sv": "brukade",
-          "example": "I used to live in Malmö."
+          "example": "I used to live in Malmö.",
+          "accept": [
+            "brukade göra"
+          ]
         },
         {
           "en": "let",
