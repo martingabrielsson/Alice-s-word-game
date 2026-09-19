@@ -1,0 +1,2268 @@
+{
+  "title": "500 everyday English words for a 10-year-old",
+  "description": "High-frequency everyday English vocabulary with Swedish translations, weighted towards the function words and verbs that let a child build full sentences.",
+  "total": 506,
+  "sections": [
+    {
+      "number": 1,
+      "name": "Sentence glue: joining words and connectives",
+      "note": "The single biggest reason a child's sentences stay short. These words let two ideas live in one sentence. Teach these first.",
+      "words": [
+        {
+          "en": "and",
+          "sv": "och",
+          "example": "I have a cat and a dog."
+        },
+        {
+          "en": "but",
+          "sv": "men",
+          "example": "It was cold, but I was happy."
+        },
+        {
+          "en": "or",
+          "sv": "eller",
+          "example": "Do you want milk or juice?"
+        },
+        {
+          "en": "so",
+          "sv": "så",
+          "example": "It was late, so we went home."
+        },
+        {
+          "en": "because",
+          "sv": "därför att",
+          "example": "I am tired because I woke up early."
+        },
+        {
+          "en": "if",
+          "sv": "om",
+          "example": "If it rains, we stay inside."
+        },
+        {
+          "en": "when",
+          "sv": "när",
+          "example": "I read when I go to bed."
+        },
+        {
+          "en": "while",
+          "sv": "medan",
+          "example": "She sang while she cooked."
+        },
+        {
+          "en": "after",
+          "sv": "efter",
+          "example": "We play after school."
+        },
+        {
+          "en": "before",
+          "sv": "innan",
+          "example": "Wash your hands before dinner."
+        },
+        {
+          "en": "until",
+          "sv": "tills",
+          "example": "Wait here until I come back."
+        },
+        {
+          "en": "as soon as",
+          "sv": "så fort",
+          "example": "Call me as soon as you get home."
+        },
+        {
+          "en": "since",
+          "sv": "ända sedan",
+          "example": "I have been here since Monday."
+        },
+        {
+          "en": "although",
+          "sv": "fast",
+          "example": "Although he was tired, he kept running."
+        },
+        {
+          "en": "even though",
+          "sv": "trots att",
+          "example": "She went out even though it was raining."
+        },
+        {
+          "en": "unless",
+          "sv": "om inte",
+          "example": "We cannot start unless everyone is here."
+        },
+        {
+          "en": "than",
+          "sv": "än",
+          "example": "My bag is heavier than yours."
+        },
+        {
+          "en": "that",
+          "sv": "att",
+          "example": "I think that it is a good idea."
+        },
+        {
+          "en": "so that",
+          "sv": "så att",
+          "example": "Speak slowly so that I understand."
+        },
+        {
+          "en": "also",
+          "sv": "också",
+          "example": "He also plays the guitar."
+        },
+        {
+          "en": "besides",
+          "sv": "dessutom",
+          "example": "It is late. Besides, I am tired."
+        },
+        {
+          "en": "instead",
+          "sv": "istället",
+          "example": "I did not walk. I took the bus instead."
+        },
+        {
+          "en": "however",
+          "sv": "dock",
+          "example": "It was cheap. However, it broke."
+        },
+        {
+          "en": "then",
+          "sv": "då",
+          "example": "First we eat, then we play."
+        },
+        {
+          "en": "first",
+          "sv": "först",
+          "example": "First, put on your shoes."
+        },
+        {
+          "en": "finally",
+          "sv": "till slut",
+          "example": "Finally, we found the key."
+        },
+        {
+          "en": "for example",
+          "sv": "till exempel",
+          "example": "I like fruit, for example apples."
+        },
+        {
+          "en": "anyway",
+          "sv": "i alla fall",
+          "example": "It was cold, but we went anyway."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "name": "Question words",
+      "note": "A child who can ask a question can keep a conversation going. Each one is a ready-made sentence opener.",
+      "words": [
+        {
+          "en": "who",
+          "sv": "vem",
+          "example": "Who is at the door?"
+        },
+        {
+          "en": "what",
+          "sv": "vad",
+          "example": "What are you doing?"
+        },
+        {
+          "en": "where",
+          "sv": "var",
+          "example": "Where do you live?"
+        },
+        {
+          "en": "why",
+          "sv": "varför",
+          "example": "Why are you laughing?"
+        },
+        {
+          "en": "how",
+          "sv": "hur",
+          "example": "How do you spell it?"
+        },
+        {
+          "en": "which",
+          "sv": "vilken",
+          "example": "Which one do you want?"
+        },
+        {
+          "en": "whose",
+          "sv": "vems",
+          "example": "Whose jacket is this?"
+        },
+        {
+          "en": "how many",
+          "sv": "hur många",
+          "example": "How many brothers do you have?"
+        },
+        {
+          "en": "how much",
+          "sv": "hur mycket",
+          "example": "How much does it cost?"
+        },
+        {
+          "en": "how old",
+          "sv": "hur gammal",
+          "example": "How old is your sister?"
+        },
+        {
+          "en": "how long",
+          "sv": "hur länge",
+          "example": "How long did you wait?"
+        },
+        {
+          "en": "how often",
+          "sv": "hur ofta",
+          "example": "How often do you train?"
+        },
+        {
+          "en": "what kind of",
+          "sv": "vad för sorts",
+          "example": "What kind of music do you like?"
+        },
+        {
+          "en": "what time",
+          "sv": "hur dags",
+          "example": "What time does it start?"
+        },
+        {
+          "en": "can I",
+          "sv": "får jag",
+          "example": "Can I borrow your pen?"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "name": "Pronouns and pointing words",
+      "note": "The subjects and objects every sentence needs. Object forms (me, him, them) are the ones children skip.",
+      "words": [
+        {
+          "en": "I",
+          "sv": "jag"
+        },
+        {
+          "en": "you",
+          "sv": "du"
+        },
+        {
+          "en": "he",
+          "sv": "han"
+        },
+        {
+          "en": "she",
+          "sv": "hon"
+        },
+        {
+          "en": "it",
+          "sv": "den, det"
+        },
+        {
+          "en": "we",
+          "sv": "vi"
+        },
+        {
+          "en": "they",
+          "sv": "de"
+        },
+        {
+          "en": "me",
+          "sv": "mig"
+        },
+        {
+          "en": "him",
+          "sv": "honom"
+        },
+        {
+          "en": "her",
+          "sv": "henne"
+        },
+        {
+          "en": "us",
+          "sv": "oss"
+        },
+        {
+          "en": "them",
+          "sv": "dem"
+        },
+        {
+          "en": "my",
+          "sv": "min"
+        },
+        {
+          "en": "your",
+          "sv": "din"
+        },
+        {
+          "en": "his",
+          "sv": "hans"
+        },
+        {
+          "en": "our",
+          "sv": "vår"
+        },
+        {
+          "en": "their",
+          "sv": "deras"
+        },
+        {
+          "en": "this",
+          "sv": "den här"
+        },
+        {
+          "en": "that one",
+          "sv": "den där"
+        },
+        {
+          "en": "these",
+          "sv": "de här"
+        },
+        {
+          "en": "someone",
+          "sv": "någon"
+        },
+        {
+          "en": "something",
+          "sv": "något"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "name": "Prepositions and place words",
+      "note": "Where things are, and how verbs attach to the rest of the sentence. Best learned as short phrases, not single words.",
+      "words": [
+        {
+          "en": "in",
+          "sv": "i",
+          "example": "in the box"
+        },
+        {
+          "en": "on",
+          "sv": "på",
+          "example": "on the table"
+        },
+        {
+          "en": "at",
+          "sv": "vid",
+          "example": "at school"
+        },
+        {
+          "en": "to",
+          "sv": "till",
+          "example": "go to bed"
+        },
+        {
+          "en": "from",
+          "sv": "från",
+          "example": "a letter from Anna"
+        },
+        {
+          "en": "of",
+          "sv": "av",
+          "example": "a glass of milk"
+        },
+        {
+          "en": "with",
+          "sv": "med",
+          "example": "with my friend"
+        },
+        {
+          "en": "without",
+          "sv": "utan",
+          "example": "without sugar"
+        },
+        {
+          "en": "for",
+          "sv": "för",
+          "example": "a present for you"
+        },
+        {
+          "en": "about",
+          "sv": "om (ämne)",
+          "example": "a book about horses"
+        },
+        {
+          "en": "over",
+          "sv": "över",
+          "example": "over the bridge"
+        },
+        {
+          "en": "under",
+          "sv": "under",
+          "example": "under the bed"
+        },
+        {
+          "en": "above",
+          "sv": "ovanför",
+          "example": "above the door"
+        },
+        {
+          "en": "below",
+          "sv": "nedanför",
+          "example": "below the window"
+        },
+        {
+          "en": "between",
+          "sv": "mellan",
+          "example": "between the trees"
+        },
+        {
+          "en": "behind",
+          "sv": "bakom",
+          "example": "behind the house"
+        },
+        {
+          "en": "in front of",
+          "sv": "framför",
+          "example": "in front of me"
+        },
+        {
+          "en": "next to",
+          "sv": "bredvid",
+          "example": "next to the door"
+        },
+        {
+          "en": "near",
+          "sv": "nära",
+          "example": "near the school"
+        },
+        {
+          "en": "inside",
+          "sv": "inuti",
+          "example": "inside the bag"
+        },
+        {
+          "en": "outside",
+          "sv": "utanför",
+          "example": "outside the door"
+        },
+        {
+          "en": "up",
+          "sv": "upp",
+          "example": "up the stairs"
+        },
+        {
+          "en": "down",
+          "sv": "ner",
+          "example": "down the hill"
+        },
+        {
+          "en": "around",
+          "sv": "runt",
+          "example": "around the corner"
+        },
+        {
+          "en": "through",
+          "sv": "genom",
+          "example": "through the window"
+        },
+        {
+          "en": "across",
+          "sv": "tvärs över",
+          "example": "across the street"
+        },
+        {
+          "en": "into",
+          "sv": "in i",
+          "example": "into the water"
+        },
+        {
+          "en": "out of",
+          "sv": "ut ur",
+          "example": "out of the car"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "name": "Time words",
+      "note": "When something happened. These turn a bare verb into a story with an order of events.",
+      "words": [
+        {
+          "en": "today",
+          "sv": "idag"
+        },
+        {
+          "en": "tomorrow",
+          "sv": "imorgon"
+        },
+        {
+          "en": "yesterday",
+          "sv": "igår"
+        },
+        {
+          "en": "tonight",
+          "sv": "ikväll"
+        },
+        {
+          "en": "now",
+          "sv": "nu"
+        },
+        {
+          "en": "soon",
+          "sv": "snart"
+        },
+        {
+          "en": "later",
+          "sv": "senare"
+        },
+        {
+          "en": "early",
+          "sv": "tidigt"
+        },
+        {
+          "en": "late",
+          "sv": "sent"
+        },
+        {
+          "en": "again",
+          "sv": "igen"
+        },
+        {
+          "en": "still",
+          "sv": "fortfarande"
+        },
+        {
+          "en": "already",
+          "sv": "redan"
+        },
+        {
+          "en": "yet",
+          "sv": "ännu"
+        },
+        {
+          "en": "ago",
+          "sv": "för ... sedan"
+        },
+        {
+          "en": "next",
+          "sv": "nästa"
+        },
+        {
+          "en": "last",
+          "sv": "förra"
+        },
+        {
+          "en": "morning",
+          "sv": "morgon"
+        },
+        {
+          "en": "afternoon",
+          "sv": "eftermiddag"
+        },
+        {
+          "en": "evening",
+          "sv": "kväll"
+        },
+        {
+          "en": "night",
+          "sv": "natt"
+        },
+        {
+          "en": "day",
+          "sv": "dag"
+        },
+        {
+          "en": "week",
+          "sv": "vecka"
+        },
+        {
+          "en": "weekend",
+          "sv": "helg"
+        },
+        {
+          "en": "month",
+          "sv": "månad"
+        },
+        {
+          "en": "year",
+          "sv": "år"
+        },
+        {
+          "en": "hour",
+          "sv": "timme"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "name": "How much and how often",
+      "note": "Quantity and frequency words. They add detail without needing a new sentence.",
+      "words": [
+        {
+          "en": "always",
+          "sv": "alltid"
+        },
+        {
+          "en": "usually",
+          "sv": "oftast"
+        },
+        {
+          "en": "often",
+          "sv": "ofta"
+        },
+        {
+          "en": "sometimes",
+          "sv": "ibland"
+        },
+        {
+          "en": "never",
+          "sv": "aldrig"
+        },
+        {
+          "en": "once",
+          "sv": "en gång"
+        },
+        {
+          "en": "twice",
+          "sv": "två gånger"
+        },
+        {
+          "en": "many",
+          "sv": "många"
+        },
+        {
+          "en": "much",
+          "sv": "mycket"
+        },
+        {
+          "en": "a lot of",
+          "sv": "en massa"
+        },
+        {
+          "en": "few",
+          "sv": "ett fåtal"
+        },
+        {
+          "en": "little",
+          "sv": "lite"
+        },
+        {
+          "en": "some",
+          "sv": "några"
+        },
+        {
+          "en": "any",
+          "sv": "något alls"
+        },
+        {
+          "en": "all",
+          "sv": "alla"
+        },
+        {
+          "en": "nothing",
+          "sv": "ingenting"
+        },
+        {
+          "en": "everyone",
+          "sv": "var och en"
+        },
+        {
+          "en": "enough",
+          "sv": "tillräckligt"
+        },
+        {
+          "en": "more",
+          "sv": "mer"
+        },
+        {
+          "en": "less",
+          "sv": "mindre"
+        },
+        {
+          "en": "only",
+          "sv": "bara"
+        },
+        {
+          "en": "both",
+          "sv": "båda"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "name": "Helper verbs (modals)",
+      "note": "The words that turn a verb into a question, a plan, a rule or a polite request. High value per word.",
+      "words": [
+        {
+          "en": "can",
+          "sv": "kan",
+          "example": "I can swim."
+        },
+        {
+          "en": "could",
+          "sv": "skulle kunna",
+          "example": "Could you help me?"
+        },
+        {
+          "en": "will",
+          "sv": "kommer att",
+          "example": "I will call you tonight."
+        },
+        {
+          "en": "would",
+          "sv": "skulle",
+          "example": "I would like some water."
+        },
+        {
+          "en": "should",
+          "sv": "borde",
+          "example": "You should wear a jacket."
+        },
+        {
+          "en": "must",
+          "sv": "måste",
+          "example": "I must finish my homework."
+        },
+        {
+          "en": "may",
+          "sv": "får",
+          "example": "May I go outside?"
+        },
+        {
+          "en": "might",
+          "sv": "kanske gör",
+          "example": "It might rain later."
+        },
+        {
+          "en": "have to",
+          "sv": "vara tvungen att",
+          "example": "I have to go now."
+        },
+        {
+          "en": "be going to",
+          "sv": "tänker",
+          "example": "We are going to watch a film."
+        },
+        {
+          "en": "used to",
+          "sv": "brukade",
+          "example": "I used to live in Malmö."
+        },
+        {
+          "en": "let",
+          "sv": "låta",
+          "example": "Let me try."
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "name": "Core everyday verbs",
+      "note": "The verbs that carry most ordinary sentences. If a verb is missing, the sentence cannot exist.",
+      "words": [
+        {
+          "en": "be",
+          "sv": "vara"
+        },
+        {
+          "en": "have",
+          "sv": "ha"
+        },
+        {
+          "en": "do",
+          "sv": "göra"
+        },
+        {
+          "en": "make",
+          "sv": "tillverka"
+        },
+        {
+          "en": "go",
+          "sv": "åka"
+        },
+        {
+          "en": "come",
+          "sv": "komma"
+        },
+        {
+          "en": "get",
+          "sv": "få"
+        },
+        {
+          "en": "take",
+          "sv": "ta"
+        },
+        {
+          "en": "give",
+          "sv": "ge"
+        },
+        {
+          "en": "put",
+          "sv": "lägga"
+        },
+        {
+          "en": "bring",
+          "sv": "ta med"
+        },
+        {
+          "en": "use",
+          "sv": "använda"
+        },
+        {
+          "en": "keep",
+          "sv": "behålla"
+        },
+        {
+          "en": "find",
+          "sv": "hitta"
+        },
+        {
+          "en": "lose",
+          "sv": "tappa bort"
+        },
+        {
+          "en": "look",
+          "sv": "titta"
+        },
+        {
+          "en": "see",
+          "sv": "se"
+        },
+        {
+          "en": "watch",
+          "sv": "kolla på"
+        },
+        {
+          "en": "hear",
+          "sv": "höra"
+        },
+        {
+          "en": "listen",
+          "sv": "lyssna"
+        },
+        {
+          "en": "say",
+          "sv": "säga"
+        },
+        {
+          "en": "tell",
+          "sv": "berätta"
+        },
+        {
+          "en": "ask",
+          "sv": "fråga"
+        },
+        {
+          "en": "answer",
+          "sv": "svara"
+        },
+        {
+          "en": "call",
+          "sv": "ringa"
+        },
+        {
+          "en": "talk",
+          "sv": "prata"
+        },
+        {
+          "en": "eat",
+          "sv": "äta"
+        },
+        {
+          "en": "drink",
+          "sv": "dricka"
+        },
+        {
+          "en": "sleep",
+          "sv": "sova"
+        },
+        {
+          "en": "wake up",
+          "sv": "vakna"
+        },
+        {
+          "en": "wash",
+          "sv": "tvätta"
+        },
+        {
+          "en": "open",
+          "sv": "öppna"
+        },
+        {
+          "en": "close",
+          "sv": "stänga"
+        },
+        {
+          "en": "start",
+          "sv": "börja"
+        },
+        {
+          "en": "stop",
+          "sv": "sluta"
+        },
+        {
+          "en": "help",
+          "sv": "hjälpa"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "name": "Moving and playing verbs",
+      "note": "Verbs for the body and for play. Easy to act out, which makes them stick.",
+      "words": [
+        {
+          "en": "walk",
+          "sv": "gå"
+        },
+        {
+          "en": "run",
+          "sv": "springa"
+        },
+        {
+          "en": "jump",
+          "sv": "hoppa"
+        },
+        {
+          "en": "climb",
+          "sv": "klättra"
+        },
+        {
+          "en": "swim",
+          "sv": "simma"
+        },
+        {
+          "en": "ride",
+          "sv": "cykla"
+        },
+        {
+          "en": "drive",
+          "sv": "köra"
+        },
+        {
+          "en": "fly",
+          "sv": "flyga"
+        },
+        {
+          "en": "throw",
+          "sv": "kasta"
+        },
+        {
+          "en": "catch",
+          "sv": "fånga"
+        },
+        {
+          "en": "push",
+          "sv": "knuffa"
+        },
+        {
+          "en": "pull",
+          "sv": "dra"
+        },
+        {
+          "en": "carry",
+          "sv": "bära"
+        },
+        {
+          "en": "fall",
+          "sv": "ramla"
+        },
+        {
+          "en": "sit",
+          "sv": "sitta"
+        },
+        {
+          "en": "stand",
+          "sv": "stå"
+        },
+        {
+          "en": "turn",
+          "sv": "vända"
+        },
+        {
+          "en": "play",
+          "sv": "leka"
+        },
+        {
+          "en": "draw",
+          "sv": "rita"
+        },
+        {
+          "en": "build",
+          "sv": "bygga"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "name": "Thinking, feeling and saying verbs",
+      "note": "These open a second clause: 'I think that...', 'I hope you...'. They are how a child gets from one clause to two.",
+      "words": [
+        {
+          "en": "think",
+          "sv": "tänka"
+        },
+        {
+          "en": "know",
+          "sv": "veta"
+        },
+        {
+          "en": "understand",
+          "sv": "förstå"
+        },
+        {
+          "en": "remember",
+          "sv": "komma ihåg"
+        },
+        {
+          "en": "forget",
+          "sv": "glömma"
+        },
+        {
+          "en": "learn",
+          "sv": "lära sig"
+        },
+        {
+          "en": "teach",
+          "sv": "lära ut"
+        },
+        {
+          "en": "read",
+          "sv": "läsa"
+        },
+        {
+          "en": "write",
+          "sv": "skriva"
+        },
+        {
+          "en": "mean",
+          "sv": "betyda"
+        },
+        {
+          "en": "believe",
+          "sv": "tro"
+        },
+        {
+          "en": "guess",
+          "sv": "gissa"
+        },
+        {
+          "en": "decide",
+          "sv": "bestämma"
+        },
+        {
+          "en": "choose",
+          "sv": "välja"
+        },
+        {
+          "en": "hope",
+          "sv": "hoppas"
+        },
+        {
+          "en": "want",
+          "sv": "vilja"
+        },
+        {
+          "en": "need",
+          "sv": "behöva"
+        },
+        {
+          "en": "like",
+          "sv": "gilla"
+        },
+        {
+          "en": "love",
+          "sv": "älska"
+        },
+        {
+          "en": "hate",
+          "sv": "hata"
+        },
+        {
+          "en": "feel",
+          "sv": "känna"
+        },
+        {
+          "en": "worry",
+          "sv": "oroa sig"
+        },
+        {
+          "en": "miss",
+          "sv": "sakna"
+        },
+        {
+          "en": "enjoy",
+          "sv": "njuta av"
+        },
+        {
+          "en": "agree",
+          "sv": "hålla med"
+        },
+        {
+          "en": "promise",
+          "sv": "lova"
+        },
+        {
+          "en": "explain",
+          "sv": "förklara"
+        },
+        {
+          "en": "describe",
+          "sv": "beskriva"
+        },
+        {
+          "en": "notice",
+          "sv": "märka"
+        },
+        {
+          "en": "wonder",
+          "sv": "undra"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "name": "Everyday-life verbs",
+      "note": "Shops, school, friends, things that break. The verbs behind most after-school stories.",
+      "words": [
+        {
+          "en": "buy",
+          "sv": "köpa"
+        },
+        {
+          "en": "sell",
+          "sv": "sälja"
+        },
+        {
+          "en": "pay",
+          "sv": "betala"
+        },
+        {
+          "en": "cost",
+          "sv": "kosta"
+        },
+        {
+          "en": "work",
+          "sv": "jobba"
+        },
+        {
+          "en": "live",
+          "sv": "bo"
+        },
+        {
+          "en": "stay",
+          "sv": "stanna"
+        },
+        {
+          "en": "leave",
+          "sv": "åka iväg"
+        },
+        {
+          "en": "arrive",
+          "sv": "komma fram"
+        },
+        {
+          "en": "wait",
+          "sv": "vänta"
+        },
+        {
+          "en": "meet",
+          "sv": "träffa"
+        },
+        {
+          "en": "visit",
+          "sv": "besöka"
+        },
+        {
+          "en": "invite",
+          "sv": "bjuda in"
+        },
+        {
+          "en": "share",
+          "sv": "dela"
+        },
+        {
+          "en": "borrow",
+          "sv": "låna"
+        },
+        {
+          "en": "lend",
+          "sv": "låna ut"
+        },
+        {
+          "en": "send",
+          "sv": "skicka"
+        },
+        {
+          "en": "show",
+          "sv": "visa"
+        },
+        {
+          "en": "try",
+          "sv": "försöka"
+        },
+        {
+          "en": "practise",
+          "sv": "öva"
+        },
+        {
+          "en": "win",
+          "sv": "vinna"
+        },
+        {
+          "en": "count",
+          "sv": "räkna"
+        },
+        {
+          "en": "change",
+          "sv": "byta"
+        },
+        {
+          "en": "break",
+          "sv": "ha sönder"
+        },
+        {
+          "en": "fix",
+          "sv": "laga"
+        },
+        {
+          "en": "tidy",
+          "sv": "plocka undan"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "name": "Describing words (adjectives)",
+      "note": "Detail words. A sentence with one adjective already sounds twice as grown-up.",
+      "words": [
+        {
+          "en": "big",
+          "sv": "stor"
+        },
+        {
+          "en": "small",
+          "sv": "liten"
+        },
+        {
+          "en": "long",
+          "sv": "lång"
+        },
+        {
+          "en": "short",
+          "sv": "kort"
+        },
+        {
+          "en": "tall",
+          "sv": "lång (om person)"
+        },
+        {
+          "en": "heavy",
+          "sv": "tung"
+        },
+        {
+          "en": "light",
+          "sv": "lätt (vikt)"
+        },
+        {
+          "en": "wide",
+          "sv": "bred"
+        },
+        {
+          "en": "thin",
+          "sv": "tunn"
+        },
+        {
+          "en": "thick",
+          "sv": "tjock"
+        },
+        {
+          "en": "fast",
+          "sv": "snabb"
+        },
+        {
+          "en": "slow",
+          "sv": "långsam"
+        },
+        {
+          "en": "hot",
+          "sv": "het"
+        },
+        {
+          "en": "warm",
+          "sv": "varm"
+        },
+        {
+          "en": "cold",
+          "sv": "kall"
+        },
+        {
+          "en": "cool",
+          "sv": "sval"
+        },
+        {
+          "en": "wet",
+          "sv": "blöt"
+        },
+        {
+          "en": "dry",
+          "sv": "torr"
+        },
+        {
+          "en": "clean",
+          "sv": "ren"
+        },
+        {
+          "en": "dirty",
+          "sv": "smutsig"
+        },
+        {
+          "en": "new",
+          "sv": "ny"
+        },
+        {
+          "en": "old",
+          "sv": "gammal"
+        },
+        {
+          "en": "young",
+          "sv": "ung"
+        },
+        {
+          "en": "easy",
+          "sv": "enkel"
+        },
+        {
+          "en": "hard",
+          "sv": "svår"
+        },
+        {
+          "en": "soft",
+          "sv": "mjuk"
+        },
+        {
+          "en": "loud",
+          "sv": "högljudd"
+        },
+        {
+          "en": "quiet",
+          "sv": "tyst"
+        },
+        {
+          "en": "dark",
+          "sv": "mörk"
+        },
+        {
+          "en": "bright",
+          "sv": "ljus"
+        },
+        {
+          "en": "full",
+          "sv": "full"
+        },
+        {
+          "en": "empty",
+          "sv": "tom"
+        },
+        {
+          "en": "right",
+          "sv": "rätt"
+        },
+        {
+          "en": "wrong",
+          "sv": "fel"
+        },
+        {
+          "en": "same",
+          "sv": "likadan"
+        },
+        {
+          "en": "different",
+          "sv": "annorlunda"
+        },
+        {
+          "en": "important",
+          "sv": "viktig"
+        },
+        {
+          "en": "favourite",
+          "sv": "favorit-"
+        },
+        {
+          "en": "beautiful",
+          "sv": "vacker"
+        },
+        {
+          "en": "ugly",
+          "sv": "ful"
+        },
+        {
+          "en": "kind",
+          "sv": "snäll"
+        },
+        {
+          "en": "funny",
+          "sv": "rolig"
+        },
+        {
+          "en": "strange",
+          "sv": "konstig"
+        },
+        {
+          "en": "ready",
+          "sv": "klar"
+        },
+        {
+          "en": "careful",
+          "sv": "försiktig"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "name": "Feelings",
+      "note": "How she feels, and how other people feel. The vocabulary of 'I feel ... because ...'.",
+      "words": [
+        {
+          "en": "happy",
+          "sv": "glad"
+        },
+        {
+          "en": "sad",
+          "sv": "ledsen"
+        },
+        {
+          "en": "angry",
+          "sv": "arg"
+        },
+        {
+          "en": "afraid",
+          "sv": "rädd"
+        },
+        {
+          "en": "tired",
+          "sv": "trött"
+        },
+        {
+          "en": "hungry",
+          "sv": "hungrig"
+        },
+        {
+          "en": "thirsty",
+          "sv": "törstig"
+        },
+        {
+          "en": "bored",
+          "sv": "uttråkad"
+        },
+        {
+          "en": "excited",
+          "sv": "taggad"
+        },
+        {
+          "en": "surprised",
+          "sv": "förvånad"
+        },
+        {
+          "en": "worried",
+          "sv": "orolig"
+        },
+        {
+          "en": "proud",
+          "sv": "stolt"
+        },
+        {
+          "en": "shy",
+          "sv": "blyg"
+        },
+        {
+          "en": "lonely",
+          "sv": "ensam"
+        },
+        {
+          "en": "brave",
+          "sv": "modig"
+        },
+        {
+          "en": "calm",
+          "sv": "lugn"
+        },
+        {
+          "en": "confused",
+          "sv": "förvirrad"
+        },
+        {
+          "en": "sick",
+          "sv": "sjuk"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "name": "Adverbs and little words that add colour",
+      "note": "Dropped into a sentence she already knows, these change the meaning without new grammar.",
+      "words": [
+        {
+          "en": "very",
+          "sv": "väldigt"
+        },
+        {
+          "en": "really",
+          "sv": "verkligen"
+        },
+        {
+          "en": "quite",
+          "sv": "ganska"
+        },
+        {
+          "en": "almost",
+          "sv": "nästan"
+        },
+        {
+          "en": "too",
+          "sv": "alltför"
+        },
+        {
+          "en": "just",
+          "sv": "precis"
+        },
+        {
+          "en": "even",
+          "sv": "till och med"
+        },
+        {
+          "en": "well",
+          "sv": "bra"
+        },
+        {
+          "en": "badly",
+          "sv": "dåligt"
+        },
+        {
+          "en": "quickly",
+          "sv": "snabbt"
+        },
+        {
+          "en": "slowly",
+          "sv": "långsamt"
+        },
+        {
+          "en": "carefully",
+          "sv": "försiktigt"
+        },
+        {
+          "en": "suddenly",
+          "sv": "plötsligt"
+        },
+        {
+          "en": "probably",
+          "sv": "förmodligen"
+        },
+        {
+          "en": "definitely",
+          "sv": "absolut"
+        },
+        {
+          "en": "together",
+          "sv": "tillsammans"
+        },
+        {
+          "en": "alone",
+          "sv": "själv"
+        },
+        {
+          "en": "away",
+          "sv": "bort"
+        },
+        {
+          "en": "back",
+          "sv": "tillbaka"
+        },
+        {
+          "en": "here",
+          "sv": "här"
+        },
+        {
+          "en": "there",
+          "sv": "där"
+        },
+        {
+          "en": "maybe",
+          "sv": "kanske"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "name": "People and family",
+      "note": "Who the sentences are about.",
+      "words": [
+        {
+          "en": "mum",
+          "sv": "mamma"
+        },
+        {
+          "en": "dad",
+          "sv": "pappa"
+        },
+        {
+          "en": "parents",
+          "sv": "föräldrar"
+        },
+        {
+          "en": "sister",
+          "sv": "syster"
+        },
+        {
+          "en": "brother",
+          "sv": "bror"
+        },
+        {
+          "en": "grandma",
+          "sv": "mormor"
+        },
+        {
+          "en": "grandpa",
+          "sv": "morfar"
+        },
+        {
+          "en": "aunt",
+          "sv": "faster"
+        },
+        {
+          "en": "uncle",
+          "sv": "farbror"
+        },
+        {
+          "en": "cousin",
+          "sv": "kusin"
+        },
+        {
+          "en": "family",
+          "sv": "familj"
+        },
+        {
+          "en": "friend",
+          "sv": "kompis"
+        },
+        {
+          "en": "neighbour",
+          "sv": "granne"
+        },
+        {
+          "en": "teacher",
+          "sv": "lärare"
+        },
+        {
+          "en": "classmate",
+          "sv": "klasskompis"
+        },
+        {
+          "en": "child",
+          "sv": "barn"
+        },
+        {
+          "en": "people",
+          "sv": "folk"
+        },
+        {
+          "en": "name",
+          "sv": "namn"
+        },
+        {
+          "en": "birthday",
+          "sv": "födelsedag"
+        },
+        {
+          "en": "party",
+          "sv": "kalas"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "name": "Home and everyday things",
+      "note": "The nouns in reach while she is talking at home.",
+      "words": [
+        {
+          "en": "house",
+          "sv": "hus"
+        },
+        {
+          "en": "home",
+          "sv": "hem"
+        },
+        {
+          "en": "room",
+          "sv": "rum"
+        },
+        {
+          "en": "kitchen",
+          "sv": "kök"
+        },
+        {
+          "en": "bathroom",
+          "sv": "badrum"
+        },
+        {
+          "en": "bedroom",
+          "sv": "sovrum"
+        },
+        {
+          "en": "garden",
+          "sv": "trädgård"
+        },
+        {
+          "en": "door",
+          "sv": "dörr"
+        },
+        {
+          "en": "window",
+          "sv": "fönster"
+        },
+        {
+          "en": "floor",
+          "sv": "golv"
+        },
+        {
+          "en": "wall",
+          "sv": "vägg"
+        },
+        {
+          "en": "stairs",
+          "sv": "trappa"
+        },
+        {
+          "en": "bed",
+          "sv": "säng"
+        },
+        {
+          "en": "table",
+          "sv": "bord"
+        },
+        {
+          "en": "chair",
+          "sv": "stol"
+        },
+        {
+          "en": "sofa",
+          "sv": "soffa"
+        },
+        {
+          "en": "lamp",
+          "sv": "lampa"
+        },
+        {
+          "en": "cupboard",
+          "sv": "skåp"
+        },
+        {
+          "en": "fridge",
+          "sv": "kylskåp"
+        },
+        {
+          "en": "key",
+          "sv": "nyckel"
+        },
+        {
+          "en": "clock",
+          "sv": "klocka"
+        },
+        {
+          "en": "phone",
+          "sv": "telefon"
+        },
+        {
+          "en": "towel",
+          "sv": "handduk"
+        },
+        {
+          "en": "pillow",
+          "sv": "kudde"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "name": "School",
+      "note": "Where most of her English day happens.",
+      "words": [
+        {
+          "en": "school",
+          "sv": "skola"
+        },
+        {
+          "en": "class",
+          "sv": "klass"
+        },
+        {
+          "en": "lesson",
+          "sv": "lektion"
+        },
+        {
+          "en": "homework",
+          "sv": "läxa"
+        },
+        {
+          "en": "book",
+          "sv": "bok"
+        },
+        {
+          "en": "page",
+          "sv": "sida"
+        },
+        {
+          "en": "word",
+          "sv": "ord"
+        },
+        {
+          "en": "sentence",
+          "sv": "mening"
+        },
+        {
+          "en": "story",
+          "sv": "saga"
+        },
+        {
+          "en": "a question",
+          "sv": "en fråga"
+        },
+        {
+          "en": "pen",
+          "sv": "penna"
+        },
+        {
+          "en": "pencil",
+          "sv": "blyertspenna"
+        },
+        {
+          "en": "rubber",
+          "sv": "suddgummi"
+        },
+        {
+          "en": "ruler",
+          "sv": "linjal"
+        },
+        {
+          "en": "paper",
+          "sv": "papper"
+        },
+        {
+          "en": "bag",
+          "sv": "väska"
+        },
+        {
+          "en": "break (at school)",
+          "sv": "rast"
+        },
+        {
+          "en": "test",
+          "sv": "prov"
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "name": "Food and drink",
+      "note": "Daily, repeatable, easy to practise at the table.",
+      "words": [
+        {
+          "en": "food",
+          "sv": "mat"
+        },
+        {
+          "en": "breakfast",
+          "sv": "frukost"
+        },
+        {
+          "en": "lunch",
+          "sv": "lunch"
+        },
+        {
+          "en": "dinner",
+          "sv": "middag"
+        },
+        {
+          "en": "snack",
+          "sv": "mellanmål"
+        },
+        {
+          "en": "bread",
+          "sv": "bröd"
+        },
+        {
+          "en": "cheese",
+          "sv": "ost"
+        },
+        {
+          "en": "milk",
+          "sv": "mjölk"
+        },
+        {
+          "en": "egg",
+          "sv": "ägg"
+        },
+        {
+          "en": "meat",
+          "sv": "kött"
+        },
+        {
+          "en": "chicken",
+          "sv": "kyckling"
+        },
+        {
+          "en": "fish",
+          "sv": "fisk"
+        },
+        {
+          "en": "potato",
+          "sv": "potatis"
+        },
+        {
+          "en": "soup",
+          "sv": "soppa"
+        },
+        {
+          "en": "sandwich",
+          "sv": "smörgås"
+        },
+        {
+          "en": "fruit",
+          "sv": "frukt"
+        },
+        {
+          "en": "apple",
+          "sv": "äpple"
+        },
+        {
+          "en": "berry",
+          "sv": "bär"
+        },
+        {
+          "en": "vegetable",
+          "sv": "grönsak"
+        },
+        {
+          "en": "water",
+          "sv": "vatten"
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "name": "Body, clothes and feeling ill",
+      "note": "Needed for anything from getting dressed to saying what hurts.",
+      "words": [
+        {
+          "en": "head",
+          "sv": "huvud"
+        },
+        {
+          "en": "hair",
+          "sv": "hår"
+        },
+        {
+          "en": "face",
+          "sv": "ansikte"
+        },
+        {
+          "en": "eye",
+          "sv": "öga"
+        },
+        {
+          "en": "ear",
+          "sv": "öra"
+        },
+        {
+          "en": "mouth",
+          "sv": "mun"
+        },
+        {
+          "en": "tooth",
+          "sv": "tand"
+        },
+        {
+          "en": "hand",
+          "sv": "hand"
+        },
+        {
+          "en": "arm",
+          "sv": "arm"
+        },
+        {
+          "en": "leg",
+          "sv": "ben"
+        },
+        {
+          "en": "foot",
+          "sv": "fot"
+        },
+        {
+          "en": "stomach",
+          "sv": "mage"
+        },
+        {
+          "en": "clothes",
+          "sv": "kläder"
+        },
+        {
+          "en": "trousers",
+          "sv": "byxor"
+        },
+        {
+          "en": "jacket",
+          "sv": "jacka"
+        },
+        {
+          "en": "shoes",
+          "sv": "skor"
+        },
+        {
+          "en": "socks",
+          "sv": "strumpor"
+        },
+        {
+          "en": "doctor",
+          "sv": "läkare"
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "name": "Weather, nature and animals",
+      "note": "Small talk starts with the weather, and children's stories are full of animals.",
+      "words": [
+        {
+          "en": "weather",
+          "sv": "väder"
+        },
+        {
+          "en": "sun",
+          "sv": "sol"
+        },
+        {
+          "en": "rain",
+          "sv": "regn"
+        },
+        {
+          "en": "snow",
+          "sv": "snö"
+        },
+        {
+          "en": "wind",
+          "sv": "vind"
+        },
+        {
+          "en": "cloud",
+          "sv": "moln"
+        },
+        {
+          "en": "sky",
+          "sv": "himmel"
+        },
+        {
+          "en": "tree",
+          "sv": "träd"
+        },
+        {
+          "en": "flower",
+          "sv": "blomma"
+        },
+        {
+          "en": "grass",
+          "sv": "gräs"
+        },
+        {
+          "en": "forest",
+          "sv": "skog"
+        },
+        {
+          "en": "lake",
+          "sv": "sjö"
+        },
+        {
+          "en": "sea",
+          "sv": "hav"
+        },
+        {
+          "en": "mountain",
+          "sv": "berg"
+        },
+        {
+          "en": "beach",
+          "sv": "strand"
+        },
+        {
+          "en": "stone",
+          "sv": "sten"
+        },
+        {
+          "en": "animal",
+          "sv": "djur"
+        },
+        {
+          "en": "bird",
+          "sv": "fågel"
+        },
+        {
+          "en": "horse",
+          "sv": "häst"
+        },
+        {
+          "en": "insect",
+          "sv": "insekt"
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "name": "Town, travel and money",
+      "note": "Out of the house: shops, buses, holidays.",
+      "words": [
+        {
+          "en": "town",
+          "sv": "stad"
+        },
+        {
+          "en": "street",
+          "sv": "gata"
+        },
+        {
+          "en": "road",
+          "sv": "väg"
+        },
+        {
+          "en": "shop",
+          "sv": "affär"
+        },
+        {
+          "en": "money",
+          "sv": "pengar"
+        },
+        {
+          "en": "price",
+          "sv": "pris"
+        },
+        {
+          "en": "cheap",
+          "sv": "billig"
+        },
+        {
+          "en": "expensive",
+          "sv": "dyr"
+        },
+        {
+          "en": "ticket",
+          "sv": "biljett"
+        },
+        {
+          "en": "bus",
+          "sv": "buss"
+        },
+        {
+          "en": "train",
+          "sv": "tåg"
+        },
+        {
+          "en": "car",
+          "sv": "bil"
+        },
+        {
+          "en": "bike",
+          "sv": "cykel"
+        },
+        {
+          "en": "plane",
+          "sv": "flygplan"
+        },
+        {
+          "en": "station",
+          "sv": "station"
+        },
+        {
+          "en": "hospital",
+          "sv": "sjukhus"
+        },
+        {
+          "en": "park",
+          "sv": "park"
+        },
+        {
+          "en": "cinema",
+          "sv": "bio"
+        },
+        {
+          "en": "holiday",
+          "sv": "lov"
+        },
+        {
+          "en": "trip",
+          "sv": "resa"
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "name": "Everyday phrases",
+      "note": "Whole chunks, learned as one unit. They buy time and keep a conversation alive while she builds the next sentence.",
+      "words": [
+        {
+          "en": "hello",
+          "sv": "hej"
+        },
+        {
+          "en": "goodbye",
+          "sv": "hej då"
+        },
+        {
+          "en": "see you",
+          "sv": "vi ses"
+        },
+        {
+          "en": "please",
+          "sv": "snälla"
+        },
+        {
+          "en": "thank you",
+          "sv": "tack"
+        },
+        {
+          "en": "you're welcome",
+          "sv": "varsågod"
+        },
+        {
+          "en": "excuse me",
+          "sv": "ursäkta"
+        },
+        {
+          "en": "sorry",
+          "sv": "förlåt"
+        },
+        {
+          "en": "good luck",
+          "sv": "lycka till"
+        },
+        {
+          "en": "well done",
+          "sv": "bra jobbat"
+        },
+        {
+          "en": "never mind",
+          "sv": "strunt i det"
+        },
+        {
+          "en": "no problem",
+          "sv": "inga problem"
+        },
+        {
+          "en": "by the way",
+          "sv": "förresten"
+        },
+        {
+          "en": "I mean",
+          "sv": "jag menar"
+        },
+        {
+          "en": "me too",
+          "sv": "jag också"
+        },
+        {
+          "en": "I don't know",
+          "sv": "jag vet inte"
+        }
+      ]
+    }
+  ]
+}
